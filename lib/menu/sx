@@ -1,0 +1,1429 @@
+Container(
+                            height: 200,
+                            child: Container(
+                              margin: EdgeInsets.all(5),
+                              height: 100,
+                              child: SingleChildScrollView(
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment
+                                          .start, // Adjust alignment as needed
+                                      children: [
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment
+                                          .start, // Adjust alignment as needed
+                                      children: [
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment
+                                          .start, // Adjust alignment as needed
+                                      children: [
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment
+                                          .start, // Adjust alignment as needed
+                                      children: [
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 10,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment
+                                          .start, // Adjust alignment as needed
+                                      children: [
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Expanded(
+                                          child: Container(
+                                              decoration: BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        15),
+                                                boxShadow: [
+                                                  BoxShadow(
+                                                    color: Colors.grey
+                                                        .withOpacity(
+                                                            0.5), //color of shadow
+                                                    spreadRadius:
+                                                        2, //spread radius
+                                                    blurRadius:
+                                                        4, // blur radius
+                                                    offset: Offset(0,
+                                                        2), // changes position of shadow
+                                                    //first paramerter of offset is left-right
+                                                    //second parameter is top to down
+                                                  ),
+                                                ],
+                                              ),
+                                              width: 100,
+                                              height: 260,
+                                              child: SingleChildScrollView(
+                                                child: Column(
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .all(5),
+                                                      child: Container(
+                                                        height: 125,
+                                                        decoration:
+                                                            BoxDecoration(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          image: const DecorationImage(
+                                                              image: AssetImage(
+                                                                  "assets/menu/menu1.png"),
+                                                              fit: BoxFit
+                                                                  .fill),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                    const Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .only(
+                                                                  left: 10),
+                                                          child: Text(
+                                                            '2 Pcs',
+                                                            style: TextStyle(
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .bold,
+                                                                fontSize:
+                                                                    18),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              left: 10),
+                                                      child: Row(
+                                                        children: [
+                                                          Column(
+                                                            crossAxisAlignment:
+                                                                CrossAxisAlignment
+                                                                    .start,
+                                                            children: [
+                                                              Text(
+                                                                  '2 Pcs chicken'),
+                                                              Text(
+                                                                  '1 bun/khuboose'),
+                                                              Text(
+                                                                  'Ketchup 1'),
+                                                              Text(
+                                                                  'mayonnaise 1'),
+                                                            ],
+                                                          ),
+                                                        ],
+                                                      ),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets
+                                                              .only(
+                                                              top: 15),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .end,
+                                                        children: [
+                                                          Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        85),
+                                                            child: Image.asset(
+                                                                'assets/icons/non-veg-icon.png',
+                                                                width: 18,
+                                                                height: 18),
+                                                          ),
+                                                          Image.asset(
+                                                              'assets/icons/rupee-indian.png',
+                                                              width: 14,
+                                                              height: 15),
+                                                          const Padding(
+                                                            padding:
+                                                                const EdgeInsets
+                                                                    .only(
+                                                                    right:
+                                                                        10),
+                                                            child:
+                                                                Text('110'),
+                                                          )
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              )),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ))
