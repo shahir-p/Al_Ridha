@@ -129,6 +129,9 @@ flutter:
     - assets/icons/call.png
     - assets/icons/mail.png
     - assets/icons/whatsapp.png
+    - assets/delivryboy/icon/complete.png
+    - assets/delivryboy/icon/delivered.png
+    - assets/delivryboy/icon/take-away.png
 
 
 

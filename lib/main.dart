@@ -35,8 +35,8 @@ class MyApp extends StatelessWidget {
         }),
         backgroundColor: defaultWidgetBackgroundColor, // Set default background color
       ),
-      // home: SignUporIn(),
-      home: Dashboard(),
+      home: SignUporIn(),
+      // home: Dashboard(),
     );
   }
 }

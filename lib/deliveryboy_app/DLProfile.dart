@@ -1,3 +1,4 @@
+import 'package:alridafrieds/deliveryboy_app/Dl%20notification.dart';
 import 'package:flutter/material.dart';
 
 class DlProfile extends StatelessWidget {
@@ -38,12 +39,14 @@ class DlProfile extends StatelessWidget {
                 color: Color(0xff66161d),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Center(
-                child: Image.asset(
-                  "assets/delivryboy/icon/bell.png",
-                  width: 20,
-                  height: 20,
-                  color: Colors.white,
+              child:Center(
+                child: IconButton(icon: ImageIcon(AssetImage('assets/delivryboy/icon/bell.png'),
+                  size: 30,
+                  color: Colors.black,
+                ),
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>DlNotification()),);
+                  },
                 ),
               ),
             ),
@@ -57,18 +60,13 @@ class DlProfile extends StatelessWidget {
                 color: Color(0xff66161d),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Center(
-                child: IconButton(
-                  icon: ImageIcon(
-                    AssetImage('assets/delivryboy/icon/user icon.png'),
-                    size: 30,
-                    color: Colors.white,
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => DlProfile()),
-                    );
+              child:Center(
+                child: IconButton(icon: ImageIcon(AssetImage('assets/delivryboy/icon/user icon.png'),
+                  size: 30,
+                  color: Colors.white,
+                ),
+                  onPressed: (){
+                    // Navigator.push(context, MaterialPageRoute(builder: (context) =>DlProfile()),);
                   },
                 ),
               ),

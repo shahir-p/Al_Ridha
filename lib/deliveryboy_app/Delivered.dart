@@ -1,3 +1,5 @@
+import 'package:alridafrieds/deliveryboy_app/DLProfile.dart';
+import 'package:alridafrieds/deliveryboy_app/Dl%20notification.dart';
 import 'package:flutter/material.dart';
 
 class Delivered extends StatefulWidget {
@@ -14,23 +16,16 @@ class _DeliveredState extends State<Delivered> {
       appBar: AppBar(
         backgroundColor: Color(0xff911f2a),
         automaticallyImplyLeading: false,
-        leading: IconButton(
-          icon: ImageIcon(
-            AssetImage('assets/icons/left.png'),
-            size: 30,
-            color: Colors.white,
-          ),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-        title: Text(
-          'Delivered',
-          style: TextStyle(
-            fontFamily: 'poppins',
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
+        title: Padding(
+          padding: const EdgeInsets.only(left: 15),
+          child: Text(
+            'Delivered',
+            style: TextStyle(
+              fontFamily: 'poppins',
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
           ),
         ),
         actions: [
@@ -43,12 +38,14 @@ class _DeliveredState extends State<Delivered> {
                 color: Color(0xff66161d),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Center(
-                child: Image.asset(
-                  "assets/delivryboy/icon/bell.png",
-                  width: 20,
-                  height: 20,
+              child:Center(
+                child: IconButton(icon: ImageIcon(AssetImage('assets/delivryboy/icon/bell.png'),
+                  size: 30,
                   color: Colors.white,
+                ),
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>DlNotification()),);
+                  },
                 ),
               ),
             ),
@@ -62,12 +59,14 @@ class _DeliveredState extends State<Delivered> {
                 color: Color(0xff66161d),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Center(
-                child: Image.asset(
-                  "assets/delivryboy/icon/user icon.png",
-                  width: 25,
-                  height: 25,
+              child:Center(
+                child: IconButton(icon: ImageIcon(AssetImage('assets/delivryboy/icon/user icon.png'),
+                  size: 30,
                   color: Colors.white,
+                ),
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>DlProfile()),);
+                  },
                 ),
               ),
             ),

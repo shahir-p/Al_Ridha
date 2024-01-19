@@ -1,4 +1,5 @@
 import 'package:alridafrieds/deliveryboy_app/DLProfile.dart';
+import 'package:alridafrieds/deliveryboy_app/Dl%20notification.dart';
 import 'package:alridafrieds/deliveryboy_app/Performance.dart';
 import 'package:flutter/material.dart';
 
@@ -40,12 +41,14 @@ class _DashBoardState extends State<DlHome> {
                 color: Color(0xff66161d),
                 borderRadius: BorderRadius.circular(30),
               ),
-              child: Center(
-                child: Image.asset(
-                  "assets/delivryboy/icon/bell.png",
-                  width: 20,
-                  height: 20,
+              child:Center(
+                child: IconButton(icon: ImageIcon(AssetImage('assets/delivryboy/icon/bell.png'),
+                  size: 30,
                   color: Colors.white,
+                ),
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>DlNotification()),);
+                  },
                 ),
               ),
             ),
