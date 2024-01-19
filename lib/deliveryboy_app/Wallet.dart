@@ -88,7 +88,7 @@ class _WalletState extends State<Wallet> {
                     borderRadius: BorderRadius.circular(15)),
                 child: Column(
                   children: [
-                    // SizedBox(height: 10,),
+                    SizedBox(height: 10,),
                     Row(
                       children: [
                         SizedBox(width: 10,),
