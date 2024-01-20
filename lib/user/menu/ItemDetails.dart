@@ -1,9 +1,14 @@
-import 'package:alridafrieds/user/accounts/Search.dart';
-import 'package:alridafrieds/user/accounts/cart.dart';
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class ItemDetails extends StatefulWidget {
-  const ItemDetails({super.key});
+  final String title;
+  final String discription;
+  final String price;
+  final String image;
+
+  const ItemDetails({super.key,required this.title,required this.discription,required this.price,required this.image,});
 
   @override
   State<ItemDetails> createState() => _ItemDetailsState();
@@ -33,62 +38,15 @@ class _ItemDetailsState extends State<ItemDetails> {
               fontWeight: FontWeight.bold,
               color: Colors.white),
         ),
-        actions: [
-          Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                    color: Color(0xff66161d),
-                    borderRadius: BorderRadius.circular(30)),
-                child: Center(
-                  child: IconButton(
-                    icon: ImageIcon(
-                      AssetImage('assets/icons/search.png'),
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => SearchPage()),
-                      );
-                    },
-                  ),
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(right: 10),
-            child: Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                    color: Color(0xff66161d),
-                    borderRadius: BorderRadius.circular(30)),
-                child: Center(
-                  child: IconButton(
-                    icon: ImageIcon(
-                      AssetImage('assets/icons/cart.png'),
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => AccountCart()),
-                      );
-                    },
-                  ),
-                )),
-          ),
-        ],
+
       ),
       body: Container(
         height: double.infinity,
         width: double.infinity,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
+
             SizedBox(height: 10,),
             Row(
               children: [
@@ -100,7 +58,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                     borderRadius: BorderRadius.circular(15),
                       image: DecorationImage(
                           image: AssetImage(
-                            "assets/sp6.png",
+                            widget.image
                           ),
                           fit: BoxFit.fill),
                     color: Colors.grey
@@ -114,7 +72,7 @@ class _ItemDetailsState extends State<ItemDetails> {
             Row(
               children: [
                 SizedBox(width: 10,),
-                Text('Grilled Chicken',style: TextStyle(fontSize: 25,
+                Text(widget.title,style: TextStyle(fontSize: 25,
                 fontWeight: FontWeight.bold)),
 
               ],
@@ -125,12 +83,14 @@ class _ItemDetailsState extends State<ItemDetails> {
                 SizedBox(
                   width: 10,
                 ),
-                Text(" a savory and succulent dish,\n"
-                    " is prepared by marinating chicken with \n "
-                    "flavorful herbs and spices before being \n"
-                    " expertly grilled to perfection."
-                    " The smoky\n char and tenderness of the chicken create\n"
-                    " a mouthwatering experience.",style:
+                Text(widget.discription,
+                  // " a savory and succulent dish,\n"
+                  //   " is prepared by marinating chicken with \n "
+                  //   "flavorful herbs and spices before being \n"
+                  //   " expertly grilled to perfection."
+                  //   " The smoky\n char and tenderness of the chicken create\n"
+                  //   " a mouthwatering experience.",
+                  style:
                   TextStyle(
                     fontSize: 15
                   ),)
@@ -138,31 +98,13 @@ class _ItemDetailsState extends State<ItemDetails> {
             ),
             SizedBox(height: 10,),
             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Row(
                   children: [
-                    SizedBox(width: 10,),
+
 
                 Image.asset('assets/icons/non-veg.png',width: 30,),
-                  ],
-                ),
-                SizedBox(width: 261,),
-                Row(
-                  children: [
-                    IconButton(
-                      icon: Icon(
-                        isFavorited
-                            ? Icons.favorite
-                            : Icons.favorite_border,
-                        color: isFavorited ? Colors.red : null,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          isFavorited = !isFavorited;
-                        });
-                        // Handle favorite icon tap
-                      },
-                    ),
                     SizedBox(width: 10,),
                   ],
                 ),
@@ -191,7 +133,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                             ),
                           ),
                           Text(
-                            '+119',
+                            widget.price,
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
@@ -210,6 +152,7 @@ class _ItemDetailsState extends State<ItemDetails> {
                 ],
               ),
             ),
+            SizedBox(height: 10,)
           ],
         ),
       ),

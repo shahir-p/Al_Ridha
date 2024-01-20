@@ -1,19 +1,15 @@
 
 import 'package:alridafrieds/user/auth/SignUp.dart';
 import 'package:alridafrieds/user/auth/forgotpass.dart';
+import 'package:alridafrieds/user/main/bottom%20navigation.dart';
 
-import 'package:alridafrieds/user/home/bottom%20navigation.dart';
 import 'package:flutter/material.dart';
 
-class Signin extends StatefulWidget {
-  const Signin({Key? key}) : super(key: key);
+class Signin extends StatelessWidget {
+   Signin({Key? key}) : super(key: key);
 
-  @override
-  State<Signin> createState() => _SigninState();
-}
-
-class _SigninState extends State<Signin> {
   final TextEditingController _emailController = TextEditingController();
+
   final TextEditingController _passwordController = TextEditingController();
 
   @override
@@ -50,7 +46,7 @@ class _SigninState extends State<Signin> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TextField(
+                child: TextFormField(
                   controller: _emailController,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -82,7 +78,7 @@ class _SigninState extends State<Signin> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TextField(
+                child: TextFormField(
                   controller: _passwordController,
                   obscureText: true,
                   decoration: InputDecoration(

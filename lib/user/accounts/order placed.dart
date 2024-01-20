@@ -1,5 +1,5 @@
-import 'package:alridafrieds/user/home/bottom%20navigation.dart';
-import 'package:alridafrieds/user/menu/menu.dart';
+
+import 'package:alridafrieds/user/main/bottom%20navigation.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 class OrderPlaced extends StatefulWidget {

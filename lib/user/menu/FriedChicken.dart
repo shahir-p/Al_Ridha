@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 
-class Menu1 extends StatefulWidget {
-  const Menu1({super.key});
+class FriedChicken extends StatefulWidget {
+  const FriedChicken({super.key});
 
   @override
-  State<Menu1> createState() => _BreadsState();
+  State<FriedChicken> createState() => _FriedChickenState();
 }
 
-class _BreadsState extends State<Menu1> {
+class _FriedChickenState extends State<FriedChicken> {
   bool isFavorited = false;
 
   @override

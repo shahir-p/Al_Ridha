@@ -151,7 +151,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       Navigator.push(context, MaterialPageRoute(builder: (context) =>Signin()),);
                     },
                     child: Text(
-                      'Sign in',
+                      'Submit',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,

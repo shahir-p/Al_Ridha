@@ -2,14 +2,9 @@
 import 'package:alridafrieds/user/auth/Signin.dart';
 import 'package:flutter/material.dart';
 
-class Signup extends StatefulWidget {
+class Signup extends StatelessWidget {
   const Signup({super.key});
 
-  @override
-  State<Signup> createState() => _signupState();
-}
-
-class _signupState extends State<Signup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +39,7 @@ class _signupState extends State<Signup> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TextField(
+                child: TextFormField(
 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -76,7 +71,7 @@ class _signupState extends State<Signup> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TextField(
+                child: TextFormField(
 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -109,7 +104,7 @@ class _signupState extends State<Signup> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TextField(
+                child: TextFormField(
 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -139,7 +134,7 @@ class _signupState extends State<Signup> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TextField(
+                child: TextFormField(
 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(

@@ -5,7 +5,9 @@ import 'package:alridafrieds/user/menu/Breads.dart';
 import 'package:alridafrieds/user/menu/Drinks.dart';
 import 'package:alridafrieds/user/menu/Dip.dart';
 import 'package:alridafrieds/user/menu/Spoffer.dart';
-import 'package:alridafrieds/user/menu/menu1.dart';
+import 'package:alridafrieds/user/menu/FriedChicken.dart';
+
+
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
@@ -107,7 +109,7 @@ class Menu extends StatelessWidget {
                     //wholw special offer page
                     child: SpOffer()),
 
-                  Container(child: Menu1()),
+                  Container(child: FriedChicken()),
 
                   Container(
                     child: Dip(),

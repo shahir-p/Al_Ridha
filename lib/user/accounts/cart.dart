@@ -1,7 +1,6 @@
 import 'package:alridafrieds/user/accounts/Payment.dart';
-import 'package:alridafrieds/user/homepage.dart';
 import 'package:alridafrieds/user/menu/menu.dart';
-import 'package:alridafrieds/user/menu/menu1.dart';
+import 'package:alridafrieds/user/menu/FriedChicken.dart';
 import 'package:flutter/material.dart';
 
 class AccountCart extends StatefulWidget {

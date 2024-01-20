@@ -198,8 +198,8 @@ class HomeContent extends StatelessWidget {
                           // child: Image.asset('assets/sp6.png',fit: BoxFit.cover,),
                         ),
                         onTap:() {
-                          Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => ItemDetails()),);
+                          // Navigator.push(context, MaterialPageRoute(
+                          //     builder: (context) => ItemDetails(title:'Grilled Chicken', discription: 'jbashdhbaksbdkbad')),);
 
                         }),
                       SizedBox(
@@ -325,17 +325,23 @@ class HomeContent extends StatelessWidget {
                     // This next line does the trick.
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage(
-                                "assets/menu/menu.png",
-                              ),
-                              fit: BoxFit.fill),
-                          // color: Colors.blue,
+                      InkWell(
+                        onTap: (){
+                          // Navigator.push(context, MaterialPageRoute(
+                          //     builder: (context) => ItemDetails(title:'Family Pack', discription: 'aksbdhabigboabloabcoabc',price: '+199',image: 'assets/spoff1.png',page: 'ItemDetails()',)),);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: AssetImage(
+                                  "assets/menu/menu.png",
+                                ),
+                                fit: BoxFit.fill),
+                            // color: Colors.blue,
+                          ),
+                          width: 170,
                         ),
-                        width: 170,
                       ),
                       SizedBox(
                         width: 5,

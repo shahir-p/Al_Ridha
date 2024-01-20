@@ -1,6 +1,5 @@
-
-import 'package:alridafrieds/user/accounts.dart';
-import 'package:alridafrieds/user/homepage.dart';
+import 'package:alridafrieds/user/main/accounts.dart';
+import 'package:alridafrieds/user/main/homepage.dart';
 import 'package:alridafrieds/user/menu/menu.dart';
 import 'package:flutter/material.dart';
 

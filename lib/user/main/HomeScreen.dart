@@ -1,24 +1,13 @@
-import 'package:alridafrieds/Account/Account.dart';
-import 'package:alridafrieds/menu/MenuPage.dart';
-import 'package:alridafrieds/menu/cart.dart';
+
+import 'package:alridafrieds/user/main/accounts.dart';
+import 'package:alridafrieds/user/main/cart.dart';
+import 'package:alridafrieds/user/menu/MenuPage.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/material/bottom_navigation_bar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
-    );
-  }
-}
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -37,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
 
-  static const List<Widget> _widgetOptions = <Widget>[
+  static  List<Widget> _widgetOptions = <Widget>[
     Text('Home Page'),
     Text('Search Page'),
     Text('Profile Page'),
