@@ -175,104 +175,97 @@ class HomeContent extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.only(left: 10),
-                child: InkWell(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Menu()));
-                  },
-                  child: Container(
-                    height: 170,
-                    width: double.infinity,
-                    child: ListView(
-                      // This next line does the trick.
-                      scrollDirection: Axis.horizontal,
-                      children: <Widget>[
-                        InkWell(
-                          child: Container(
+                child: Container(
+                  height: 170,
+                  width: double.infinity,
+                  child: ListView(
+                    // This next line does the trick.
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      InkWell(
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: AssetImage(
+                                  "assets/sp6.png",
+                                ),
+                                fit: BoxFit.fill),
+                            // color: Colors.red,
+                          ),
+                          width: 280,
+                          // child: Image.asset('assets/sp6.png',fit: BoxFit.cover,),
+                        ),
+                        onTap:() {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Menu()));
 
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(10),
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                    "assets/sp6.png",
-                                  ),
-                                  fit: BoxFit.fill),
-                              // color: Colors.red,
-                            ),
-                            width: 280,
-                            // child: Image.asset('assets/sp6.png',fit: BoxFit.cover,),
-                          ),
-                          onTap:() {
-                            // Navigator.push(context, MaterialPageRoute(
-                            //     builder: (context) => ItemDetails(title:'Grilled Chicken', discription: 'jbashdhbaksbdkbad')),);
-
-                          }),
-                        SizedBox(
-                          width: 5,
+                        }),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                "assets/sp6.png",
+                              ),
+                              fit: BoxFit.fill),
+                          // color: Colors.red,
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/sp6.png",
-                                ),
-                                fit: BoxFit.fill),
-                            // color: Colors.red,
-                          ),
-                          width: 280,
+                        width: 280,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                "assets/sp6.png",
+                              ),
+                              fit: BoxFit.fill),
+                          // color: Colors.red,
                         ),
-                        SizedBox(
-                          width: 5,
+                        width: 280,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                "assets/sp6.png",
+                              ),
+                              fit: BoxFit.fill),
+                          // color: Colors.red,
                         ),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/sp6.png",
-                                ),
-                                fit: BoxFit.fill),
-                            // color: Colors.red,
-                          ),
-                          width: 280,
+                        width: 280,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image: DecorationImage(
+                              image: AssetImage(
+                                "assets/sp6.png",
+                              ),
+                              fit: BoxFit.fill),
+                          // color: Colors.red,
                         ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/sp6.png",
-                                ),
-                                fit: BoxFit.fill),
-                            // color: Colors.red,
-                          ),
-                          width: 280,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                                image: AssetImage(
-                                  "assets/sp6.png",
-                                ),
-                                fit: BoxFit.fill),
-                            // color: Colors.red,
-                          ),
-                          width: 280,
-                        ),
-                        SizedBox(
-                          width: 5,
-                        ),
-                      ],
-                    ),
+                        width: 280,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                    ],
                   ),
                 ),
               ),
