@@ -1,5 +1,6 @@
 
 import 'package:alridafrieds/user/auth/SignUp.dart';
+import 'package:alridafrieds/user/auth/forgotpass.dart';
 
 import 'package:alridafrieds/user/home/bottom%20navigation.dart';
 import 'package:flutter/material.dart';
@@ -96,8 +97,18 @@ class _SigninState extends State<Signin> {
                   ),
                 ),
               ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(onPressed:(){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>ForgotPassword()),);
+                  }, child: Text('forgot password?',style: TextStyle(
+                    color: Colors.black
+                  ),)),
+                ],
+              ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
