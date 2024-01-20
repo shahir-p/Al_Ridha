@@ -31,7 +31,7 @@ class _ItemDetailsState extends State<ItemDetails> {
           },
         ),
         title: Text(
-          'Menu',
+          widget.title,
           style: TextStyle(
               fontFamily: 'poppins',
               fontSize: 20,

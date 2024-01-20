@@ -13,41 +13,49 @@ class FriedChicken extends StatelessWidget {
       {
         'title': '1 Pcs',
         'image': 'assets/menu/menu.png',
+        'price':'+69',
         'page': ItemDetails(title:'1 Pcs',image:'assets/menu/menu.png' ,price:'+69',discription: '1 Pcs ',)
       },
       {
         'title': '2 Pcs',
         'image': 'assets/menu/menu.png',
+      'price':'+129',
         'page': ItemDetails(title:'2 Pcs',image:'assets/menu/menu.png' ,price:'+129',discription: 'Best ',)
       },
       {
         'title': '4 Pcs',
         'image': 'assets/menu/menu.png',
+        'price':'+269',
         'page': ItemDetails(title:'4 pcs',image:'assets/menu/menu.png' ,price:'+269',discription: '4 Pcs ',)
       },
       {
         'title': '6 Pcs',
         'image': 'assets/menu/menu.png',
+        'price':'+409',
         'page': ItemDetails(title:'6 Pcs',image:'assets/menu/menu.png' ,price:'+409',discription: '6 Pcs ',)
       },
       {
         'title': '8 Pcs',
         'image': 'assets/menu/menu.png',
+        'price':'+589',
         'page': ItemDetails(title:'8 Pcs',image:'assets/menu/menu.png' ,price:'+589',discription: '8 Pcs',)
       },
       {
         'title': '10 Pcs',
         'image': 'assets/menu/menu.png',
+        'price':'+649',
         'page': ItemDetails(title:'10Pcs',image:'assets/menu/menu.png' ,price:'+649',discription: '10 Pcs ',)
       },
       {
         'title': '16 Pcs',
         'image': 'assets/menu/menu.png',
+        'price':'+1019',
         'page': ItemDetails(title:'16 Pcs',image:'assets/menu/menu.png' ,price:'+1019',discription: '16 Pcs ',)
       },
       {
         'title': '24 Pcs',
         'image': 'assets/menu/menu.png',
+        'price':'+1519',
         'page': ItemDetails(title:'24 Pcs',image:'assets/menu/menu.png' ,price:'+1519',discription: '24 Pcs ',)
       },
     ];
@@ -91,11 +99,13 @@ class FriedChicken extends StatelessWidget {
                       Container(
                         height: 120,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: const DecorationImage(
-                            image: AssetImage("assets/menu/menu.png"),
-                            fit: BoxFit.fill,
-                          ),
+                          borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
+                          image: DecorationImage(
+                              image: AssetImage(
+                                items[index]['image'],
+                              ),
+                              fit: BoxFit.cover),
                         ),
                       ),
                       SizedBox(
@@ -145,7 +155,7 @@ class FriedChicken extends StatelessWidget {
                                 ),
                               ),
                               Text(
-                                '+1519',
+                                items[index]['price'],
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,

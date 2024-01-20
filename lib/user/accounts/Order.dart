@@ -19,12 +19,9 @@ class AccountOrder extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Text(
-            'Orders',
-            style: TextStyle(color: Colors.white, fontFamily: 'poppins'),
-          ),
+        title: Text(
+          'Orders',
+          style: TextStyle(color: Colors.white, fontFamily: 'poppins'),
         ),
       ),
       body: Container(

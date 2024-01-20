@@ -76,14 +76,15 @@ class SpOffer extends StatelessWidget {
                         //image container
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(15),
+                          color: Colors.white,
                           image: DecorationImage(
-                            image: AssetImage(items[index]['image']),
-                            fit: BoxFit.fill,
-                          ),
-                          color: Colors.red,
+                              image: AssetImage(
+                                items[index]['image'],
+                              ),
+                              fit: BoxFit.cover),
                         ),
-                      ),
-                    ),
+
+                    ),),
                     SizedBox(height: 8),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 5),

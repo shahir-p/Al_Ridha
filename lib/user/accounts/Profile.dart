@@ -17,12 +17,9 @@ class ProfileUser extends StatelessWidget {
             Navigator.pop(context);
           },
         ),
-        title: Padding(
-          padding: const EdgeInsets.only(left: 20),
-          child: Text(
-            'Profile',
-            style: TextStyle(color: Colors.white, fontFamily: 'poppins'),
-          ),
+        title: Text(
+          'Profile',
+          style: TextStyle(color: Colors.white, fontFamily: 'poppins'),
         ),
       ),
       body: Container(
