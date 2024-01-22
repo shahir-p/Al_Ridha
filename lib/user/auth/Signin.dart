@@ -48,12 +48,12 @@ class Signin extends StatelessWidget {
                   controller: _emailController,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 2),
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(width: Width*0.007),
+                      borderRadius: BorderRadius.circular(Height*0.015),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(width: 2, color: Colors.black),),
+                      borderRadius: BorderRadius.circular(Height*0.015),
+                      borderSide: BorderSide(width: Width*0.007, color: Colors.black),),
                   hintText: 'Enter your Email',
                   ),
                 ),
@@ -68,7 +68,7 @@ class Signin extends StatelessWidget {
                   Text(
                     'Password',
                     style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                        fontWeight: FontWeight.bold, fontSize: Height*0.025),
                   ),
                 ],
               ),
@@ -79,12 +79,12 @@ class Signin extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 2),
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(width: Width*0.007),
+                      borderRadius: BorderRadius.circular(Height*0.015),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(width: 2, color: Colors.black),),
+                      borderRadius: BorderRadius.circular(Height*0.015),
+                      borderSide: BorderSide(width: Width*0.007, color: Colors.black),),
                     hintText: 'Enter your password',
                   ),
                 ),

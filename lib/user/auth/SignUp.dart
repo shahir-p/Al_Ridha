@@ -7,6 +7,8 @@ class Signup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Height=MediaQuery.of(context).size.height;
+    final Width=MediaQuery.of(context).size.width;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
@@ -14,26 +16,22 @@ class Signup extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 100),
-                child: Text(
-                  'Sign Up',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                ),
+              SizedBox(height: Height*0.12,),
+              Text(
+                'Sign Up',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: Height*0.026),
               ),
               SizedBox(
-                height: 80,
+                height: Height*0.09,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      'Username',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
+                  SizedBox(width: Width*0.025,),
+                  Text(
+                    'Username',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: Height*0.023),
                   ),
                 ],
               ),
