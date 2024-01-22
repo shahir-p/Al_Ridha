@@ -33,6 +33,8 @@ class _ForgotPasswordState extends State<ForgotPassword> {
 
   @override
   Widget build(BuildContext context) {
+    final Height=MediaQuery.of(context).size.height;
+    final Width=MediaQuery.of(context).size.width;
     final TextEditingController _emailController = TextEditingController();
 
     return Scaffold(
@@ -42,65 +44,57 @@ class _ForgotPasswordState extends State<ForgotPassword> {
         child: SafeArea(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 100),
-                child: Text(
-                  'Sign In',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                ),
+              SizedBox(height: Height*0.16,),
+              Text(
+                'Sign In',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: Height*0.03),
               ),
               SizedBox(
-                height: 120,
+                height: Height*0.1,
               ),
-              Padding(
-                padding: const EdgeInsets.only(left: 10),
-                child: Text(
-                  'Email',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
-                ),
+              Text(
+                'Email',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: Height*0.023),
               ),
               SizedBox(
-                height: 10,
+                height: Height*0.01,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TextField(
+                child: TextFormField(
                   controller: _emailController,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 2),
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(width: Width*0.007),
+                      borderRadius: BorderRadius.circular(Height*0.015),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(width: 2, color: Colors.black),
+                      borderRadius: BorderRadius.circular(Height*0.015),
+                      borderSide: BorderSide(width: Width*0.007, color: Colors.black),
                     ),
                     hintText: 'Enter your Email',
                   ),
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: Height*0.02,
               ),
               Text(
                 'OTP',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: Height*0.023),
               ),
               SizedBox(
-                height: 10,
+                height: Height*0.02,
               ),
-              // Ro
-              //
-              // w containing four OTP input boxes
-              SizedBox(height: 10,),
+              // SizedBox(height: 10,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
                   4,
                       (index) => Container(
-                    height: 50,
-                    width: 50,
-                    margin: EdgeInsets.symmetric(horizontal: 5),
+                    height: Height*0.05,
+                    width: Height*0.05,
+                    margin: EdgeInsets.symmetric(horizontal: Height*0.01),
                     child: TextField(
                       controller: _otpControllers[index],
                       maxLength: 1,
@@ -121,12 +115,12 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       decoration: InputDecoration(
                         counterText: "",
                         border: OutlineInputBorder(
-                          borderSide: BorderSide(width: 2),
-                          borderRadius: BorderRadius.circular(10.0),
+                          borderSide: BorderSide(width: Width*0.007),
+                          borderRadius: BorderRadius.circular(Height*0.015),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          borderSide: BorderSide(width: 2, color: Colors.black),
+                          borderRadius: BorderRadius.circular(Height*0.015),
+                          borderSide: BorderSide(width: Width*0.007, color: Colors.black),
                         ),
                         hintText: '0',
                       ),
@@ -135,37 +129,34 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: Height*0.02,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: SizedBox(
-                  height: 60,
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      // Access _emailController.text and each _otpControllers[index].text for user input
-                      String email = _emailController.text;
-                      String otp = _otpControllers.map((controller) => controller.text).join('');
-                      print('Email: $email, OTP: $otp');
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>Signin()),);
-                    },
-                    child: Text(
-                      'Submit',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: Colors.white,
-                      ),
+              SizedBox(
+                height: Height*0.07,
+                width: Width*0.9,
+                child: ElevatedButton(
+                  onPressed: () {
+                    // Access _emailController.text and each _otpControllers[index].text for user input
+                    String email = _emailController.text;
+                    String otp = _otpControllers.map((controller) => controller.text).join('');
+                    print('Email: $email, OTP: $otp');
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>Signin()),);
+                  },
+                  child: Text(
+                    'Submit',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: Height*0.025,
+                      color: Colors.white,
                     ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                    ),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
                   ),
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: Height*0.01,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
