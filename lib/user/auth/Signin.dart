@@ -14,6 +14,8 @@ class Signin extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Height=MediaQuery.of(context).size.height;
+    final Width=MediaQuery.of(context).size.width;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
@@ -21,26 +23,22 @@ class Signin extends StatelessWidget {
         child: SafeArea(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.only(top: 100),
-                child: Text(
-                  'Sign In',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                ),
+              SizedBox(height: Height*0.1,),
+              Text(
+                'Sign In',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: Height*0.03),
               ),
               SizedBox(
-                height: 120,
+                height: Height*0.14,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      'Email',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
+                  SizedBox(width: Width*0.025,),
+                  Text(
+                    'Email',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: Height*0.025),
                   ),
                 ],
               ),
@@ -61,18 +59,16 @@ class Signin extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: Height*0.01,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      'Password',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
+                  SizedBox(width: Width*0.025,),
+                  Text(
+                    'Password',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: 20),
                   ),
                 ],
               ),
@@ -104,33 +100,30 @@ class Signin extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 10,
+                height: Height*0.01,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: SizedBox(
-                  height: 60,
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>HomeScreen()),);
-                      // Access _emailController.text and _passwordController.text for user input
-                    },
-                    child: Text(
-                      'Sign in',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.white),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                    ),
+              SizedBox(
+                height: Height*0.06,
+                width: Width*0.9,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>HomeScreen()),);
+                    // Access _emailController.text and _passwordController.text for user input
+                  },
+                  child: Text(
+                    'Sign in',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: Height*0.025,
+                        color: Colors.white),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
                   ),
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: Height*0.01,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
