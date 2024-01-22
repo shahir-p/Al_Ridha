@@ -41,29 +41,27 @@ class Signup extends StatelessWidget {
 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 2),
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(width: Width*0.007),
+                      borderRadius: BorderRadius.circular(Height*0.015),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(width: 2, color: Colors.black),),
+                      borderRadius: BorderRadius.circular(Height*0.015),
+                      borderSide: BorderSide(width: Width*0.007, color: Colors.black),),
                     hintText: 'Enter your Username',
                   ),
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: Height*0.01,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      'Email',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
+                  SizedBox(width: Width*0.025,),
+                  Text(
+                    'Email',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: Height*0.023),
                   ),
                 ],
               ),
@@ -73,30 +71,28 @@ class Signup extends StatelessWidget {
 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 2),
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(width:  Width*0.007),
+                      borderRadius: BorderRadius.circular(Height*0.015),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(width: 2, color: Colors.black),),
+                      borderRadius: BorderRadius.circular(Height*0.015),
+                      borderSide: BorderSide(width:  Width*0.007, color: Colors.black),),
                     hintText: 'Enter your Email',
                   ),
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: Height*0.01,
               ),
 
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      'Create Password',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
+                  SizedBox(width: Width*0.025,),
+                  Text(
+                    'Create Password',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: Height*0.023),
                   ),
                 ],
               ),
@@ -106,27 +102,25 @@ class Signup extends StatelessWidget {
 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 2),
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(width:  Width*0.007),
+                      borderRadius: BorderRadius.circular(Height*0.015),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(width: 2, color: Colors.black),),
+                      borderRadius: BorderRadius.circular(Height*0.015),
+                      borderSide: BorderSide(width:  Width*0.007, color: Colors.black),),
                     hintText: 'Create password',
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
+              SizedBox(height:Height*0.01,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
-                    child: Text(
-                      'Confirm Password',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 20),
-                    ),
+                  SizedBox(width: Width*0.025,),
+                  Text(
+                    'Confirm Password',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold, fontSize: Height*0.023),
                   ),
                 ],
               ),
@@ -136,47 +130,40 @@ class Signup extends StatelessWidget {
 
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(width: 2),
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderSide: BorderSide(width:  Width*0.007),
+                      borderRadius: BorderRadius.circular(Height*0.015),
                     ),
                     focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                      borderSide: BorderSide(width: 2, color: Colors.black),),
+                      borderRadius: BorderRadius.circular(Height*0.015),
+                      borderSide: BorderSide(width:  Width*0.007, color: Colors.black),),
                     hintText: 'Confirm your password',
                   ),
                 ),
               ),
+              SizedBox(height:Height*0.02,),
+
+
               SizedBox(
-                height:10
-              ),
-
-
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: SizedBox(
-                  height: 60,
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>Signin()),);
-                      // Access _emailController.text and _passwordController.text for user input
-                    },
-                    child: Text(
-                      'Sign Up',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.white),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                    ),
+                height: Height*0.07,
+                width: Width*0.9,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>Signin()),);
+                    // Access _emailController.text and _passwordController.text for user input
+                  },
+                  child: Text(
+                    'Sign Up',
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: Height*0.025,
+                        color: Colors.white),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.black,
                   ),
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
+              SizedBox(height:Height*0.01,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
