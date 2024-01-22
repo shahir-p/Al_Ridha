@@ -46,7 +46,7 @@ class SignUporIn extends StatelessWidget {
                             child: Image.asset(
                               "assets/icons/users.png", // Replace with your image asset
                               width: 30.0,
-                              height: 30.0,
+                              height: 40.0,//changed 30
                             ),
                           ),
                         ),
