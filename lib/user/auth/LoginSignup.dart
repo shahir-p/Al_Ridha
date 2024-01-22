@@ -11,6 +11,8 @@ class SignUporIn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Height=MediaQuery.of(context).size.height;
+    final Width=MediaQuery.of(context).size.width;
     return Scaffold(
       body: Container(
         height: double.infinity,
@@ -25,47 +27,45 @@ class SignUporIn extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(
-                height: 50,
+                height: Height*0.05,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 15),
-                    child: Center(
-                      child: InkWell(
-                        onTap: () {
-                          _showOptionsDialog(context);
-                        },
-                        child: Container(
-                          width: 35.0,
-                          height: 35.0,
-                          decoration: BoxDecoration(
-                              shape: BoxShape.circle, color: Color(0xffe3a95c)),
-                          child: Center(
-                            child: Image.asset(
-                              "assets/icons/users.png", // Replace with your image asset
-                              width: 30.0,
-                              height: 40.0,//changed 30
-                            ),
+                  Center(
+                    child: InkWell(
+                      onTap: () {
+                        _showOptionsDialog(context);
+                      },
+                      child: Container(
+                        width: Width*0.12,
+                        // height: Height*0.1,
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle, color: Color(0xffe3a95c)),
+                        child: Center(
+                          child: Image.asset(
+                            "assets/icons/users.png", // Replace with your image asset
+                            width: Width*0.06,
+                            height: Height*0.06,//changed 30
                           ),
                         ),
                       ),
                     ),
                   ),
+                  SizedBox(width: Width*0.05,)
                 ],
               ),
               SizedBox(
-                height: 500,
+                height: Height*0.7,
               ),
               Container(
                   //Sign in button
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    border: Border.all(width: 2),
+                    borderRadius: BorderRadius.circular(Height*0.03),
+                    border: Border.all(width: Width*0.008),
                   ),
-                  height: 50,
-                  width: 250,
+                  height: Height*0.06,
+                  width: Width*0.65,
                   child: ElevatedButton(
                       onPressed: () {
                         Navigator.push(context, MaterialPageRoute(builder: (context) =>Signin()),);
@@ -74,23 +74,22 @@ class SignUporIn extends StatelessWidget {
                         child: Text(
                           'Sign in',
                           style: TextStyle(
-                            fontFamily: 'poppins',
-                              fontSize: 18,
+                              fontSize: Height*0.025,
                               fontWeight: FontWeight.bold,
                               color: Colors.black),
                         ),
                       ))),
               SizedBox(
-                height: 10,
+                height: Height*0.01,
               ),
               Container(
                 //Sign in button
                 decoration: BoxDecoration(
                   color: Colors.black,
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(Height*0.03),
                 ),
-                height: 50,
-                width: 250,
+                height: Height*0.06,
+                width: Width*0.65,
                 child: ElevatedButton(
                   onPressed: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) =>Signup()),);
@@ -102,7 +101,7 @@ class SignUporIn extends StatelessWidget {
                     style: TextStyle(
                       fontFamily: 'poppins',
                       color: Colors.white,
-                      fontSize: 18,
+                      fontSize: Height*0.025,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
