@@ -1,6 +1,7 @@
 // import 'package:alridafrieds/deliveryboy_app/Bottom%20Nav.dart';
 import 'package:alridafrieds/deliveryboy_app/Dashboard.dart';
 import 'package:alridafrieds/deliveryboy_app/Home.dart';
+import 'package:alridafrieds/user/accounts/order%20placed.dart';
 import 'package:alridafrieds/user/auth/LoginSignup.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: defaultWidgetBackgroundColor, // Set default background color
       ),
       home: SignUporIn(),
-      // home: Dashboard(),
+      // home: OrderPlaced(),
     );
   }
 }

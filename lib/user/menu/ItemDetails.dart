@@ -18,6 +18,8 @@ class _ItemDetailsState extends State<ItemDetails> {
   bool isFavorited = false;
   @override
   Widget build(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff911f2a),
@@ -41,34 +43,24 @@ class _ItemDetailsState extends State<ItemDetails> {
 
       ),
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height:Height,
+        width: Width,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-
-            SizedBox(height: 10,),
-            Row(
-              children: [
-                SizedBox(width: 10,),
-                Container(
-                  height: 200,
-                  width: 340,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                      image: DecorationImage(
-                          image: AssetImage(
-                            widget.image
-                          ),
-                          fit: BoxFit.fill),
-                    color: Colors.grey
-                  ),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-              ],
+            Container(
+              margin: EdgeInsets.symmetric(vertical: Height*0.010,horizontal: Width*0.02),
+              height: Height*0.25,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(15),
+                  image: DecorationImage(
+                      image: AssetImage(
+                        widget.image
+                      ),
+                      fit: BoxFit.fill),
+                color: Colors.grey
+              ),
             ),
+            SizedBox(height: Height*0.03,),
             Row(
               children: [
                 SizedBox(width: 10,),
@@ -77,26 +69,29 @@ class _ItemDetailsState extends State<ItemDetails> {
 
               ],
             ),
-            SizedBox(height: 10,),
+            Spacer(),
             Row(
               children: [
                 SizedBox(
                   width: 10,
                 ),
-                Text(widget.discription,
-                  // " a savory and succulent dish,\n"
-                  //   " is prepared by marinating chicken with \n "
-                  //   "flavorful herbs and spices before being \n"
-                  //   " expertly grilled to perfection."
-                  //   " The smoky\n char and tenderness of the chicken create\n"
-                  //   " a mouthwatering experience.",
-                  style:
-                  TextStyle(
-                    fontSize: 15
-                  ),)
+                Expanded(
+
+                  child: Text(widget.discription,
+                    // " a savory and succulent dish,\n"
+                    //   " is prepared by marinating chicken with \n "
+                    //   "flavorful herbs and spices before being \n"
+                    //   " expertly grilled to perfection."
+                    //   " The smoky\n char and tenderness of the chicken create\n"
+                    //   " a mouthwatering experience.",
+                    style:
+                    TextStyle(
+                      fontSize: 15
+                    ),),
+                )
               ],
             ),
-            SizedBox(height: 10,),
+           Spacer(),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -110,48 +105,46 @@ class _ItemDetailsState extends State<ItemDetails> {
                 ),
               ],
             ),
-            SizedBox(height: 170,),
-            SizedBox(
-              height: 60,
-              child: Row(
-                children: [SizedBox(width: 10,),
-                  SizedBox(
-                    height: 50,
-                    width: 340,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            'Add',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'poppins',
-                              fontSize: 20,
-                            ),
-                          ),
-                          Text(
-                            widget.price,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'poppins',
-                              fontSize: 20,
-                            ),
-                          ),
-                        ],
+            Spacer(),
+              Container(
+                height: Height*0.07,
+                margin: EdgeInsets.symmetric(horizontal: Width*0.015),
+                // width: ,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Add',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'poppins',
+                          fontSize: 15,
+                        ),
                       ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff3c8a3c),
+                      Spacer(),
+                      Text(
+                        widget.price,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'poppins',
+                          fontSize: 15,
+                        ),
                       ),
+                    ],
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color(0xff3c8a3c),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0), // Adjust the radius as needed
                     ),
                   ),
-                  SizedBox(width: 10,)
-                ],
+                ),
               ),
-            ),
+              SizedBox(width: 10,),
             SizedBox(height: 10,)
           ],
         ),

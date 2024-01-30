@@ -1,4 +1,3 @@
-
 import 'package:alridafrieds/user/accounts/Search.dart';
 import 'package:alridafrieds/user/accounts/cart.dart';
 import 'package:alridafrieds/user/menu/Breads.dart';
@@ -7,11 +6,10 @@ import 'package:alridafrieds/user/menu/Dip.dart';
 import 'package:alridafrieds/user/menu/Spoffer.dart';
 import 'package:alridafrieds/user/menu/FriedChicken.dart';
 
-
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
-   Menu({super.key});
+  Menu({super.key});
 
   List<Tab> tabs = [
     Tab(child: Text("Special Offer")),
@@ -23,6 +21,8 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.width;
     return DefaultTabController(
       length: 5,
       child: Scaffold(
@@ -48,7 +48,6 @@ class Menu extends StatelessWidget {
               child: Text(
                 'Menu',
                 style: TextStyle(
-                    fontFamily: 'poppins',
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                     color: Colors.white),
@@ -64,12 +63,18 @@ class Menu extends StatelessWidget {
                         color: Color(0xff66161d),
                         borderRadius: BorderRadius.circular(30)),
                     child: Center(
-                      child: IconButton(icon: ImageIcon(AssetImage('assets/icons/search.png'),
-                        size: 30,
-                        color: Colors.white,
-                      ),
-                        onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) =>SearchPage()),);
+                      child: IconButton(
+                        icon: ImageIcon(
+                          AssetImage('assets/icons/search.png'),
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SearchPage()),
+                          );
                         },
                       ),
                     )),
@@ -83,12 +88,18 @@ class Menu extends StatelessWidget {
                         color: Color(0xff66161d),
                         borderRadius: BorderRadius.circular(30)),
                     child: Center(
-                      child:IconButton(icon: ImageIcon(AssetImage('assets/icons/cart.png'),
-                        size: 30,
-                        color: Colors.white,
-                      ),
-                        onPressed: (){
-                          Navigator.push(context, MaterialPageRoute(builder: (context) =>AccountCart()),);
+                      child: IconButton(
+                        icon: ImageIcon(
+                          AssetImage('assets/icons/cart.png'),
+                          size: 30,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => AccountCart()),
+                          );
                         },
                       ),
                     )),
@@ -98,29 +109,22 @@ class Menu extends StatelessWidget {
           body: Padding(
             padding: const EdgeInsets.all(5.0),
             child: Container(
-              height: double.infinity,
-              width: double.infinity,
+              height: Height,
+              width: Width,
               // color: Colors.amber,
               child: TabBarView(
                 children: [
                   //Special offer container  Special offer container  Special offer container  Special offer container  Special offer container  Special offer container  Special offer container
-                  Container(
-                    // color: Colors.cyanAccent,
-                    //wholw special offer page
-                    child: SpOffer()),
+                  Container(child: SpOffer()),
 
                   Container(child: FriedChicken()),
 
-                  Container(
-                    child: Dip(),
+                  Container(child: Dip(),
                   ),
 
-                  Container(
-                    child: Breads(),
+                  Container(child: Breads(),
                   ),
-
-                  Container(
-                    child: Drinks(),
+                  Container(child: Drinks(),
                   ),
                 ],
               ),

@@ -4,6 +4,7 @@ import 'package:alridafrieds/user/menu/FriedChicken.dart';
 import 'package:flutter/material.dart';
 
 class AccountCart extends StatefulWidget {
+
   const AccountCart({super.key});
 
   @override
@@ -31,6 +32,8 @@ class _AccountCartState extends State<AccountCart> {
 
   @override
   Widget build(BuildContext context) {
+    final Hieght=MediaQuery.of(context).size.height;
+    final Width=MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -38,7 +41,7 @@ class _AccountCartState extends State<AccountCart> {
         leading: IconButton(
           icon: ImageIcon(
             AssetImage('assets/icons/left.png'),
-            size: 30,
+            size: Width*0.08,
             color: Colors.white,
           ),
           onPressed: () {
@@ -53,221 +56,91 @@ class _AccountCartState extends State<AccountCart> {
         ),
       ),
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height:Hieght,
+        width: Width,
         color: Colors.white,
         child: Column(
           children: [
-            SizedBox(
-              height: 10,
-            ),
-            SizedBox(
-              height: 480,
-              width: 350,
-              child: Container(
-                // color: Colors.blueAccent.shade100,
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 5),
-                          child: Text(
-                            'Order list',
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                        TextButton(
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(builder: (context) => Menu()),
-                              );
-                            },
-                            child: Text(
-                              '+add more',
-                              style: TextStyle(color: Color(0xff3C8A3C)),
-                            ))
-                      ],
-                    ),
-                    Divider(
-                      height: 2,
-                      thickness: 2,
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Container(
-                      height: 425,
-                      width: 330,
-                      // color: Colors.pinkAccent.shade100,
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Product name',
-                                style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.w400),
-                              ),
-                              IconButton(
-                                onPressed: () {},
-                                icon: ImageIcon(
-                                  AssetImage(
-                                    'assets/icons/delete.png',
-                                  ),
-                                  size: 18,
-                                  color: Color(0xff911f2a),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Text(
-                                'Details',
-                                style: TextStyle(
-                                    fontSize: 15, fontWeight: FontWeight.w400),
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                'Price:',
-                                style: TextStyle(
-                                    fontSize: 15, fontWeight: FontWeight.bold),
-                              ),
-                              Row(
-                                children: [
-                                  Image.asset(
-                                    'assets/icons/rupee-indian.png',
-                                    width: 15,
-                                  ),
-                                  Text((price * quantity).toString(),
-                                      style: TextStyle(fontSize: 18)),
-                                ],
-                              )
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Row(
-                            children: [
-                              Container(
-                                  child: Expanded(
-                                child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      // SizedBox(width: 50,),
-                                      Container(
-                                        decoration: BoxDecoration(
-                                          borderRadius:
-                                              BorderRadius.circular(10),
-                                        ),
-                                        height: 20,
-                                        width: 60,
-                                        child: Row(
-                                          children: [
-                                            Container(
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                                color: Color(0xff911f2a),
-                                              ),
-                                              width: 20,
-                                              height: 20,
-                                              child: Center(
-                                                child: IconButton(
-                                                  onPressed: () {
-                                                    decrementQuantity();
-                                                  },
-                                                  icon: ImageIcon(
-                                                    AssetImage(
-                                                      'assets/icons/minus-sign.png',
-                                                    ),
-                                                    size: 20,
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
-                                            Container(
-                                              color: Colors.white,
-                                              width: 20,
-                                              height: 20,
-                                              child: Center(
-                                                  child: Text('$quantity',
-                                                      style: TextStyle(
-                                                          fontSize: 15))),
-                                            ),
-                                            Container(
-                                              decoration: BoxDecoration(
-                                                borderRadius:
-                                                    BorderRadius.circular(10),
-                                                color: Color(0xff3C8A3C),
-                                              ),
-                                              width: 20,
-                                              height: 20,
-                                              child: Center(
-                                                child: IconButton(
-                                                  onPressed: () {
-                                                    incrementQuantity();
-                                                  },
-                                                  icon: ImageIcon(
-                                                    AssetImage(
-                                                      'assets/icons/plus.png',
-                                                    ),
-                                                    size: 20,
-                                                    color: Colors.white,
-                                                  ),
-                                                ),
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                      )
-                                    ]),
-                              )),
-                            ],
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Divider(
-                            height: 2,
-                            thickness: 1.5,
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            SizedBox(
-              // height: 250,
-              width: double.infinity,
-              child: Container(
-                  child: Column(
+            Container(
+              height: Hieght*0.61,
+              margin: EdgeInsets.all(10),
+              // color: Colors.blueAccent.shade100,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 10, vertical: 5),
-                        child: Row(
+                      SizedBox(width: Width*0.01,),
+                      Text(
+                        'Order list',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),Spacer(),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => Menu()),
+                            );
+                          },
+                          child: Text(
+                            '+add more',
+                            style: TextStyle(color: Color(0xff3C8A3C)),
+                          ))
+                    ],
+                  ),
+                  Divider(
+                    height: 2,
+                    thickness: 2,
+                  ),
+                  SizedBox(
+                    height: 5,
+                  ),
+                  Container(
+                    height: Hieght*0.5,
+                    width: Width-20,
+                    // color: Colors.pinkAccent.shade100,
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'Product name',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.w400),
+                            ),
+                            Spacer(),
+                            IconButton(
+                              onPressed: () {},
+                              icon: ImageIcon(
+                                AssetImage(
+                                  'assets/icons/delete.png',
+                                ),
+                                size: 18,
+                                color: Color(0xff911f2a),
+                              ),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text(
+                              'Details',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.w400),
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              'subtotal',
-                              style: TextStyle(fontSize: 18),
+                              'Price:',
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.bold),
                             ),
                             Row(
                               children: [
@@ -281,75 +154,194 @@ class _AccountCartState extends State<AccountCart> {
                             )
                           ],
                         ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Divider(
-                        height: 2,
-                        thickness: 1.5,
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 10),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Row(
                           children: [
-                            Text(
-                              'Total',
-                              style: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.bold),
-                            ),
-                            Row(
-                              children: [
-                                Image.asset(
-                                  'assets/icons/rupee-indian.png',
-                                  width: 15,
-                                ),
-                                Text((price * quantity+dlcharge).toString(),
-                                    style: TextStyle(fontSize: 18)),
-                              ],
-                            )
+                            Container(
+                                child: Expanded(
+                              child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    // SizedBox(width: 50,),
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        borderRadius:
+                                            BorderRadius.circular(10),
+                                      ),
+                                      height: 20,
+                                      width: 60,
+                                      child: Row(
+                                        children: [
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Color(0xff911f2a),
+                                            ),
+                                            width: 20,
+                                            height: 20,
+                                            child: Center(
+                                              child: IconButton(
+                                                onPressed: () {
+                                                  decrementQuantity();
+                                                },
+                                                icon: ImageIcon(
+                                                  AssetImage(
+                                                    'assets/icons/minus-sign.png',
+                                                  ),
+                                                  size: 20,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                          Container(
+                                            color: Colors.white,
+                                            width: 20,
+                                            height: 20,
+                                            child: Center(
+                                                child: Text('$quantity',
+                                                    style: TextStyle(
+                                                        fontSize: 15))),
+                                          ),
+                                          Container(
+                                            decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Color(0xff3C8A3C),
+                                            ),
+                                            width: 20,
+                                            height: 20,
+                                            child: Center(
+                                              child: IconButton(
+                                                onPressed: () {
+                                                  incrementQuantity();
+                                                },
+                                                icon: ImageIcon(
+                                                  AssetImage(
+                                                    'assets/icons/plus.png',
+                                                  ),
+                                                  size: 20,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ),
+                                          )
+                                        ],
+                                      ),
+                                    )
+                                  ]),
+                            )),
                           ],
                         ),
-                      ),
-                      Row(
-                        children: [
-                          SizedBox(width: 5),
-                          Text(
-                            '(inclusive delivery charges&GST)',
-                            style: TextStyle(fontSize: 12, color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 65,
-                      ),
-                      SizedBox(
-                        width: 340,
-                        height: 50,
-                        child: ElevatedButton(
-                            onPressed: () {
-
-                              Navigator.push(context, MaterialPageRoute(builder: (context) =>Payment()),);
-                            },
-                            child: Text(
-                              'Proceed to checkout',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                              ),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                                backgroundColor: Color(0xff3C8A3C))),
-                      )
-                    ],
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Divider(
+                          height: 2,
+                          thickness: 1.5,
+                        )
+                      ],
+                    ),
                   ),
-                  color: Color(0xffededed)),
+                ],
+              ),
             ),
+            Spacer(),
+            Container(
+              height: Hieght*0.25,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        SizedBox(width: Width*0.02,),
+                        Text(
+                          'subtotal',
+                          style: TextStyle(fontSize: 18),
+                        ),
+                        Spacer(),
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/icons/rupee-indian.png',
+                              width: 15,
+                            ),
+                            Text((price * quantity).toString(),
+                                style: TextStyle(fontSize: 18)),
+                            SizedBox(width: Width*0.02,),
+                          ],
+                        )
+                      ],
+                    ),
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Divider(
+                      height: 2,
+                      thickness: 1.5,
+                    ),
+                    SizedBox(
+                      height: Hieght*0.01,
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: Width*0.02,),
+                        Text(
+                          'Total',
+                          style: TextStyle(
+                              fontSize: 15, fontWeight: FontWeight.bold),
+                        ),
+                        Spacer(),
+                        Row(
+                          children: [
+                            Image.asset(
+                              'assets/icons/rupee-indian.png',
+                              width: 15,
+                            ),
+                            Text((price * quantity+dlcharge).toString(),
+                                style: TextStyle(fontSize: 18)),
+                            SizedBox(width: Width*0.02,),
+                          ],
+                        )
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        SizedBox(width: 5),
+                        Text(
+                          '(inclusive delivery charges&GST)',
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
+                        ),
+                      ],
+                    ),
+                    Spacer(),
+
+                    Container(
+                      height: Hieght*0.07,
+                      width: Width-20,
+                      child: ElevatedButton(
+                          onPressed: () {
+
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>Payment()),);
+                          },
+                          child: Text(
+                            'Proceed to checkout',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Color(0xff3C8A3C))),
+                    ),
+                    SizedBox(height: Hieght*0.02,)
+                  ],
+                ),
+                color: Color(0xffededed)),
           ],
         ),
       ),

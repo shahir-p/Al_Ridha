@@ -6,30 +6,24 @@ import 'package:alridafrieds/user/accounts/Search.dart';
 import 'package:alridafrieds/user/accounts/cart.dart';
 import 'package:flutter/material.dart';
 
-class Accounts extends StatefulWidget {
+class Accounts extends StatelessWidget {
   const Accounts({super.key});
 
   @override
-  State<Accounts> createState() => _AccountsState();
-}
-
-class _AccountsState extends State<Accounts> {
-  @override
   Widget build(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Color(0xff911f2a),
           automaticallyImplyLeading: false,
-          title: Padding(
-            padding: const EdgeInsets.only(left: 15),
-            child: Text(
-              'Account',
-              style: TextStyle(
-                  fontFamily: 'poppins',
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            ),
+          title: Text(
+            'Account',
+            style: TextStyle(
+                fontFamily: 'poppins',
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.white),
           ),
           actions: [
             Padding(
@@ -77,22 +71,19 @@ class _AccountsState extends State<Accounts> {
           child: ListView(children: [
             Column(
               children: [
+                SizedBox(height: Height*0.03,),
                 Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 60),
-                      child: Text(
-                        'Account and Settings',
-                        style: TextStyle(fontSize: 23,
-                            fontFamily: 'poppins',
-                            color: Colors.black,
-                        fontWeight: FontWeight.bold),
-                      ),
+                    Text(
+                      'Account and Settings',
+                      style: TextStyle(fontSize: 23,
+                          color: Colors.black,
+                      fontWeight: FontWeight.bold),
                     )
                   ],
                 ), //// Text Row
                 SizedBox(
-                  height: 20,
+                  height: Height*0.03,
                 ),
 
 
@@ -103,15 +94,6 @@ class _AccountsState extends State<Accounts> {
                     color: Colors.grey.shade400,
                     borderRadius: BorderRadius.circular(30)
                   ),
-                  // child:Container(
-                  //   height: 30,
-                  //   width: 30,
-                  //   decoration: BoxDecoration(
-                  //     borderRadius: BorderRadius.circular(30),
-                  //     image: DecorationImage(
-                  //       image: AssetImage('assets/icons/user-avatar.png')
-                  //     )
-                  //   ),
                   child: IconButton(
                     iconSize: 32,
                     icon: const Icon(Icons.image),
@@ -128,8 +110,8 @@ class _AccountsState extends State<Accounts> {
                 ),
 
                 SizedBox(
-                  height: 55,
-                  width: 350,
+                  height: Height*0.075,
+                  width: Width-20,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -182,8 +164,8 @@ class _AccountsState extends State<Accounts> {
                   height: 10,
                 ),
                 SizedBox(
-                  height: 55,
-                  width: 350,
+                  height: Height*0.075,
+                  width: Width-20,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -238,8 +220,8 @@ class _AccountsState extends State<Accounts> {
                 ),
 
                 SizedBox(
-                  height: 55,
-                  width: 350,
+                  height: Height*0.075,
+                  width: Width-20,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -298,8 +280,8 @@ class _AccountsState extends State<Accounts> {
 
 
                 SizedBox(
-                  height: 55,
-                  width: 350,
+                  height: Height*0.075,
+                  width: Width-20,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -353,8 +335,8 @@ class _AccountsState extends State<Accounts> {
                 ),
 
                 SizedBox(
-                  height: 55,
-                  width: 350,
+                  height: Height*0.075,
+                  width: Width-20,
                   child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.white,
@@ -408,6 +390,7 @@ class _AccountsState extends State<Accounts> {
         ));
   }
 }
+
 void showSignOutConfirmationDialog(BuildContext context) {
   showDialog(
     context: context,

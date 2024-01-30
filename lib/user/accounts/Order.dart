@@ -5,6 +5,8 @@ class AccountOrder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -25,19 +27,17 @@ class AccountOrder extends StatelessWidget {
         ),
       ),
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height:Height,
+        width: Width,
         child: Column(
           children: [
-            SizedBox(
-              height: 10,
-            ),
             Container(
+              margin: EdgeInsets.symmetric(horizontal: Width*0.02,vertical: Height*0.02),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.grey.shade400),
-              height: 60,
-              width: 350,
+              height: Height*0.08,
+              width: Width,
               child: Row(
                 children: [
                   SizedBox(
@@ -49,14 +49,14 @@ class AccountOrder extends StatelessWidget {
                       fontSize: 18,
                     ),
                   ),
-                  SizedBox(
-                    width: 100,
-                  ),
+                 Spacer(),
                   Container(
                     height: 30,
                     width: 30,
                     child: Image.asset('assets/icons/check-mark.png'),
-                  )
+
+                  ),
+                  SizedBox(width: Width*0.05,)
                 ],
               ),
             )

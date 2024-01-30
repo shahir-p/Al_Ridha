@@ -1,7 +1,8 @@
 
 import 'package:alridafrieds/user/main/accounts.dart';
 import 'package:alridafrieds/user/main/cart.dart';
-import 'package:alridafrieds/user/menu/MenuPage.dart';
+import 'package:alridafrieds/user/menu/MenuPage(no need).dart';
+import 'package:alridafrieds/user/menu/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/painting/edge_insets.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -20,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   static  List<Widget> _pages = <Widget>[
    HomeScreen(),
-    MenuPage(),
+    Menu(),
     Accounts()
 
   ];
@@ -561,7 +562,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
           if (index == 1) {
             // Navigate to MenuPage
-            Navigator.push(context, MaterialPageRoute(builder: (context) => MenuPage()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => Menu()));
           } else if (index == 2) {
             // Navigate to Accounts
             Navigator.push(context, MaterialPageRoute(builder: (context) => Accounts()));

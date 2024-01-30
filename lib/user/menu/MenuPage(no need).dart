@@ -1,18 +1,16 @@
 
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MenuPage());
-}
 
-class MenuPage extends StatefulWidget {
-  const MenuPage({super.key});
+
+class MenuPageex extends StatefulWidget {
+  const MenuPageex({super.key});
 
   @override
-  State<MenuPage> createState() => _MenuPageState();
+  State<MenuPageex> createState() => _MenuPageState();
 }
 
-class _MenuPageState extends State<MenuPage> {
+class _MenuPageState extends State<MenuPageex> {
   List<Tab> tabs = [
     Tab(child: Text("Special Offer")),
     Tab(child: Text("Value Packs")),

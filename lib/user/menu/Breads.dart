@@ -42,7 +42,7 @@ class Breads extends StatelessWidget {
             crossAxisCount: 2,
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
-            childAspectRatio: 4/ 5,
+            childAspectRatio: 4.4/ 5,
           ),
           itemCount: items.length,
           itemBuilder: (context, index) {
@@ -55,72 +55,71 @@ class Breads extends StatelessWidget {
                     ));
               },
               child: Container(
+                // margin: EdgeInsets.symmetric(horizontal: Width),
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
                       color: Colors.grey.withOpacity(0.5),
-                      spreadRadius: 3,
-                      blurRadius: 4,
+                      spreadRadius: 1,
+                      blurRadius: 1,
                       offset: Offset(0, 3),
                     ),
                   ],
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.white,
                 ),
-                width: 150,
-                height: 230,
-                child: Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: Column(
-                    children: [
-                      Container(
-                        height: 120,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(15),
-                          color: Colors.white,
-                          image: DecorationImage(
-                              image: AssetImage(
-                                items[index]['image'],
-                              ),
-                              fit: BoxFit.cover),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 5),
-                            child: Text(
-                              items[index]['title'],
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontFamily: 'poppins',
-                                fontWeight: FontWeight.bold,
-                              ),
+                child: Column(
+                  children: [
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: Width*0.005,vertical: Height*0.005),
+                      height: Height*0.145,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        color: Colors.white,
+                        image: DecorationImage(
+                            image: AssetImage(
+                              items[index]['image'],
                             ),
+                            fit: BoxFit.cover),
+                      ),
+                    ),
+                    // SizedBox(
+                    //   height: Height*0.006,
+                    // ),
+                    Spacer(),
+                    Row(
+
+                      children: [
+                        SizedBox(width: Width*0.005,),
+                        Text(
+                          items[index]['title'],
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: 'poppins',
+                            fontWeight: FontWeight.bold,
                           ),
-                          Padding(
-                            padding: const EdgeInsets.only(top: 5),
-                            child: Image.asset(
-                              'assets/icons/veg.png',
-                              width: 15,
-                            ),
-                          )
-                        ],
-                      ),
-                      // SizedBox(
-                      //   height: 5,
-                      // ),
-                      SizedBox(
-                        height: 40,
+                        ),
+                        Spacer(),
+                        Image.asset(
+                          'assets/icons/veg.png',
+                          width: Height*0.018,
+                        ),
+                        SizedBox(width: Width*0.008,),
+                      ],
+                    ),
+                    // SizedBox(
+                    //   height: 5,
+                    // ),
+                    Spacer(),
+                    SizedBox(
+
+                      height: Height*0.05,
+                      child: Container(
+                        margin: EdgeInsets.symmetric(horizontal: Width*0.005),
                         child: ElevatedButton(
                           onPressed: () {},
                           child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Text(
                                 'Add',
@@ -131,6 +130,7 @@ class Breads extends StatelessWidget {
                                   fontSize: 15,
                                 ),
                               ),
+                              Spacer(),
                               Text(
                                 items[index]['price'],
                                 style: TextStyle(
@@ -144,18 +144,34 @@ class Breads extends StatelessWidget {
                           ),
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0xff3c8a3c),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10.0), // Adjust the radius as needed
+                            ),
                           ),
                         ),
                       ),
-                    ],
-                  ),
+                    ),
+                    Spacer(),
+
+                  ],
                 ),
 
               ),
             );
           },
         )
+      //             GridView.builder(
+      //                 gridDelegate:
+      //                     SliverGridDelegateWithFixedCrossAxisCount(
+      //                         crossAxisCount: 3,
+      //                         crossAxisSpacing: 20,
+      //                         mainAxisSpacing: 20,
+      //                         childAspectRatio: 6 / 3.4),
+      //                 children: [
 
+      //
+      //   ],
+      // ),
     );
   }
 }

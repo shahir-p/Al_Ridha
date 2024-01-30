@@ -92,7 +92,6 @@ flutter:
     - assets/icons/non-veg.png
     - assets/menu/
     - assets/icons/
-    - assets/spoff1.png
     - assets/delivryboy/
     - assets/delivryboy/icon/bell.png
     - assets/delivryboy/icon/user icon.png
@@ -135,7 +134,6 @@ flutter:
     - assets/sp/sp2.png
     - assets/sp/sp5.png
     - assets/sp/delicious-chicken-table.jpg
-    - assets/spoff1.png
 
 
 
