@@ -41,10 +41,13 @@ body: Container(
         SizedBox(
           height: 50,
         ),
-        Text('If you want to cancel the order please contact us',style: TextStyle(
-          fontSize: 12,
-          color: Colors.grey
-        ),)
+        Align(
+          alignment: Alignment.bottomCenter,
+          child: Text('If you want to cancel the order please contact us',style: TextStyle(
+            fontSize: 12,
+            color: Colors.grey
+          ),),
+        )
       ],
     ),
   ),

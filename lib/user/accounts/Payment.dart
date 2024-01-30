@@ -11,6 +11,8 @@ class _PaymentState extends State<Payment> {
 
   @override
   Widget build(BuildContext context) {
+    final Hieght=MediaQuery.of(context).size.height;
+    final Width=MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -37,6 +39,7 @@ class _PaymentState extends State<Payment> {
           children: [
             Expanded(
               child: Container(
+                // color: Colors.blueAccent,
                 child: Column(
                   children: [
                     Row(
@@ -58,8 +61,8 @@ class _PaymentState extends State<Payment> {
                       height: 30,
                     ),
                     Container(
-                      height: 60,
-                      width: 340,
+                      height: Hieght*0.07,
+                      width: Width-20,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all()),
@@ -74,15 +77,13 @@ class _PaymentState extends State<Payment> {
                             child: Image.asset('assets/icons/google-pay.png'),
                           ),
                           SizedBox(
-                            width: 10,
+                            width: Width*0.03,
                           ),
                           Text(
                             'G Pay',
                             style: TextStyle(fontSize: 20),
                           ),
-                          SizedBox(
-                            width: 158,
-                          ),
+                          Spacer(),
                           Radio(
                             value: 0,
                             groupValue: selectedRadio,
@@ -100,8 +101,8 @@ class _PaymentState extends State<Payment> {
                       height: 10,
                     ),
                     Container(
-                      height: 60,
-                      width: 340,
+                      height: Hieght*0.07,
+                      width: Width-20,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all()),
@@ -116,15 +117,13 @@ class _PaymentState extends State<Payment> {
                             child: Image.asset('assets/icons/paytm.png'),
                           ),
                           SizedBox(
-                            width: 10,
+                            width: Width*0.03,
                           ),
                           Text(
                             'Paytm',
                             style: TextStyle(fontSize: 20),
                           ),
-                          SizedBox(
-                            width: 150,
-                          ),
+                          Spacer(),
                           Radio(
                             value: 1,
                             groupValue: selectedRadio,
@@ -142,8 +141,8 @@ class _PaymentState extends State<Payment> {
                       height: 10,
                     ),
                     Container(
-                      height: 60,
-                      width: 340,
+                      height: Hieght*0.07,
+                      width: Width-20,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all()),
@@ -158,15 +157,13 @@ class _PaymentState extends State<Payment> {
                             child: Image.asset('assets/icons/upi-icon.png'),
                           ),
                           SizedBox(
-                            width: 10,
+                            width: Width*0.03,
                           ),
                           Text(
                             'UPI',
                             style: TextStyle(fontSize: 20),
                           ),
-                          SizedBox(
-                            width: 184,
-                          ),
+                        Spacer(),
                           Radio(
                             value: 2,
                             groupValue: selectedRadio,
@@ -191,30 +188,33 @@ class _PaymentState extends State<Payment> {
                 child: SizedBox(
                   // height: 250,
                   width: double.infinity,
-                  child: Container(
+                  child:  Container(
+                      height: Hieght*0.25,
                       child: Column(
                         children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 10, vertical: 5),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'subtotal',
-                                  style: TextStyle(fontSize: 18),
-                                ),
-                                Row(
-                                  children: [
-                                    Image.asset(
-                                      'assets/icons/rupee-indian.png',
-                                      width: 15,
-                                    ),
-                                    Text('99', style: TextStyle(fontSize: 18)),
-                                  ],
-                                )
-                              ],
-                            ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(width: Width*0.02,),
+                              Text(
+                                'subtotal',
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              Spacer(),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/icons/rupee-indian.png',
+                                    width: 15,
+                                  ),
+                                  Text(
+                                      '99',
+                                      // (price * quantity).toString(),
+                                      style: TextStyle(fontSize: 18)),
+                                  SizedBox(width: Width*0.02,),
+                                ],
+                              )
+                            ],
                           ),
                           SizedBox(
                             height: 5,
@@ -224,53 +224,53 @@ class _PaymentState extends State<Payment> {
                             thickness: 1.5,
                           ),
                           SizedBox(
-                            height: 5,
+                            height: Hieght*0.01,
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  'Total',
-                                  style: TextStyle(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Row(
-                                  children: [
-                                    Image.asset(
-                                      'assets/icons/rupee-indian.png',
-                                      width: 15,
-                                    ),
-                                    Text('99', style: TextStyle(fontSize: 18)),
-                                  ],
-                                )
-                              ],
-                            ),
+                          Row(
+                            children: [
+                              SizedBox(width: Width*0.02,),
+                              Text(
+                                'Total',
+                                style: TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.bold),
+                              ),
+                              Spacer(),
+                              Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/icons/rupee-indian.png',
+                                    width: 15,
+                                  ),
+                                  Text(
+                                      '99',
+                                      // (price * quantity+dlcharge).toString(),
+                                      style: TextStyle(fontSize: 18)),
+                                  SizedBox(width: Width*0.02,),
+                                ],
+                              )
+                            ],
                           ),
                           Row(
                             children: [
                               SizedBox(width: 5),
                               Text(
                                 '(inclusive delivery charges&GST)',
-                                style:
-                                    TextStyle(fontSize: 12, color: Colors.grey),
+                                style: TextStyle(fontSize: 12, color: Colors.grey),
                               ),
                             ],
                           ),
-                          SizedBox(
-                            height: 40,
-                          ),
-                          SizedBox(
-                            width: 340,
-                            height: 50,
+                          Spacer(),
+
+                          Container(
+                            height: Hieght*0.07,
+                            width: Width-20,
                             child: ElevatedButton(
                                 onPressed: () {
+
                                   Navigator.push(context, MaterialPageRoute(builder: (context) =>OrderPlaced()),);
                                 },
                                 child: Text(
-                                  'Pay & Confirm',
+                                  'Confirm Payment',
                                   style: TextStyle(
                                     fontSize: 18,
                                     fontWeight: FontWeight.bold,
@@ -279,7 +279,8 @@ class _PaymentState extends State<Payment> {
                                 ),
                                 style: ElevatedButton.styleFrom(
                                     backgroundColor: Color(0xff3C8A3C))),
-                          )
+                          ),
+                          SizedBox(height: Hieght*0.02,)
                         ],
                       ),
                       color: Color(0xffededed)),
