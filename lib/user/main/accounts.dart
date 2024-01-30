@@ -406,7 +406,7 @@ void showSignOutConfirmationDialog(BuildContext context) {
               // or clear user session data.
               Navigator.of(context).pop(); // Close the dialog
             },
-            child: Text("No",style: TextStyle(color: Color(0xff911f2a),),),
+            child: Text("No",style: TextStyle(color: Colors.grey,),),
           ),
           TextButton(
             onPressed: () {

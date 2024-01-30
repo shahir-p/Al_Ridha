@@ -5,6 +5,8 @@ class ContactUs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Hieght=MediaQuery.of(context).size.height;
+    final Width=MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -25,15 +27,14 @@ class ContactUs extends StatelessWidget {
         ),
       ),
       body: Container(
+        margin: EdgeInsets.all(20),
         child: Column(
           children: [
-            SizedBox(height: 30,),
             Row(
               children: [
-                SizedBox(width: 10,),
                 Container(
-                  height: 60,
-                  width: 340,
+                  height: Hieght*0.07,
+                  width: Width-40,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all()),
@@ -65,10 +66,10 @@ class ContactUs extends StatelessWidget {
 
             Row(
               children: [
-                SizedBox(width: 10,),
+
                 Container(
-                  height: 60,
-                  width: 340,
+                  height: Hieght*0.07,
+                  width: Width-40,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all()),
@@ -100,10 +101,9 @@ class ContactUs extends StatelessWidget {
 
             Row(
               children: [
-                SizedBox(width: 10,),
                 Container(
-                  height: 60,
-                  width: 340,
+                  height: Hieght*0.07,
+                  width: Width-40,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all()),
