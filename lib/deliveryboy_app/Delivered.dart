@@ -12,20 +12,19 @@ class Delivered extends StatefulWidget {
 class _DeliveredState extends State<Delivered> {
   @override
   Widget build(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff911f2a),
         automaticallyImplyLeading: false,
-        title: Padding(
-          padding: const EdgeInsets.only(left: 15),
-          child: Text(
-            'Delivered',
-            style: TextStyle(
-              fontFamily: 'poppins',
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+        title: Text(
+          'Delivered',
+          style: TextStyle(
+            fontFamily: 'poppins',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
         actions: [
@@ -73,46 +72,46 @@ class _DeliveredState extends State<Delivered> {
           ),
         ],
       ),
-      body: Center(
-        child: Container(
-          height: double.infinity,
-          width: 340,
-          child: Column(
+      body: Container(
+        height: Height,
+        width:Width,
+        child: Column(
 
-            children: [
-              SizedBox(height: 10,),
-              Container(
-                height: 70,
-                width: 330,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(),
+          children: [
+            Container(
+              height: Height*0.07,
+              // width: 330,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(),
 
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(width: 10,),
-                    Text('1',style: TextStyle(
+              ),
+              margin: EdgeInsets.all(10),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(width: Width*0.08,),
+                  Text('1',style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold
+                  ),),
+                  // Spacer(),
+                  SizedBox(width: 30,),
+                  Text('Order No:#001',style: TextStyle(
                       color: Colors.black,
                       fontSize: 18,
                       fontWeight: FontWeight.bold
-                    ),),
-                    // SizedBox(width: 30,),
-                    Text('Order No:#001',style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold
-                    ),),
-                    // SizedBox(width: 30,),
-                    Container(height: 30,
-                    child: Image.asset('assets/icons/check-mark.png'),),
-                    SizedBox(width: 10,)
-                  ],
-                ),
-              )
-            ],
-          ),
+                  ),),
+                  Spacer(),
+                  // SizedBox(width: 30,),
+                  Container(height: 30,
+                  child: Image.asset('assets/icons/check-mark.png'),),
+                  SizedBox(width: 10,)
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );

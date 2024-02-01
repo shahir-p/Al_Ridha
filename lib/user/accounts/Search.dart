@@ -14,6 +14,8 @@ class _SearchPageState extends State<SearchPage> {
 
   @override
   Widget build(BuildContext context) {
+    final Height = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff911f2a),
@@ -85,35 +87,30 @@ class _SearchPageState extends State<SearchPage> {
         ],
       ),
       body: Container(
-        child: Column(
+        margin: EdgeInsets.all(10),
+        child: Row(
           children: [
-            SizedBox(height: 10,),
-            Row(
-              children: [
-                SizedBox(width: 10,),
-                SizedBox(
-                  height: 50,
-                  width: 335,
-                  child:  TextField(
-                    controller:_SearchController,
+            SizedBox(
+              height: Height*0.07,
+              width: Width-20,
+              child:  TextField(
+                controller:_SearchController,
 
-                    decoration: InputDecoration(
-                      suffixIcon: Icon(Icons.search),
-                      border: OutlineInputBorder(
-                        borderSide: BorderSide(width: 2),
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                        borderSide: BorderSide(width: 2,
-                            color: Colors.black),),
-                      hintText: 'Search here...',
-
-                    ),
+                decoration: InputDecoration(
+                  suffixIcon: Icon(Icons.search),
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide(width: 2),
+                    borderRadius: BorderRadius.circular(10.0),
                   ),
+                  focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(10.0),
+                    borderSide: BorderSide(width: 2,
+                        color: Colors.black),),
+                  hintText: 'Search here...',
+
                 ),
-              ],
-            )
+              ),
+            ),
           ],
         ),
       ),

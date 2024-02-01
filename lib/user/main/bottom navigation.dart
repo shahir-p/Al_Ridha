@@ -11,7 +11,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _SelectedCurrentIndex = 0;
-  final _pages = [HomeContent(), Menu(), Accounts()];
+  final _pages = [HomeContent(), AlRidaMenu(), Accounts()];
 
   @override
   Widget build(BuildContext context) {

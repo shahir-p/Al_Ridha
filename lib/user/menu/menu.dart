@@ -8,8 +8,8 @@ import 'package:alridafrieds/user/menu/FriedChicken.dart';
 
 import 'package:flutter/material.dart';
 
-class Menu extends StatelessWidget {
-  Menu({super.key});
+class AlRidaMenu extends StatelessWidget {
+  AlRidaMenu({super.key});
 
   List<Tab> tabs = [
     Tab(child: Text("Special Offer")),

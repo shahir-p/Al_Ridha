@@ -15,20 +15,19 @@ class _DashBoardState extends State<DlHome> {
 
   @override
   Widget build(BuildContext context) {
+    final Height= MediaQuery.of(context).size.height;
+    final Width= MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff911f2a),
         automaticallyImplyLeading: false,
-        title: Padding(
-          padding: const EdgeInsets.only(left: 15),
-          child: Text(
-            'Dashboard',
-            style: TextStyle(
-              fontFamily: 'poppins',
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+        title: Text(
+          'Dashboard',
+          style: TextStyle(
+            fontFamily: 'poppins',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
         actions: [
@@ -77,8 +76,8 @@ class _DashBoardState extends State<DlHome> {
         ],
       ),
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height:Height,
+        width: Width,
         child: ListView(
           children:[ Column(
             children: [
@@ -86,11 +85,11 @@ class _DashBoardState extends State<DlHome> {
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
                 child: Row(
                   children: [
+                    SizedBox(width: Width*0.01,),
                     Text(
                       'Hy User',
                       style: TextStyle(
-                        fontSize: 20,
-                        fontFamily: 'poppins',
+                        fontSize: Height*0.025,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -99,7 +98,7 @@ class _DashBoardState extends State<DlHome> {
                       isToggleOn ? 'Online' : 'Offline',
                       style: TextStyle(
                         fontFamily: 'poppins',
-                        fontSize: 16,
+                        fontSize: Height*0.02,
                         color: isToggleOn ? Color(0xff388e3c) : Color(0xff911f2a),
                       ),
                     ),
@@ -118,39 +117,30 @@ class _DashBoardState extends State<DlHome> {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: Height*0.025,
               ),
               Container(
-                height: 360,
-                width: 340,
-                decoration: BoxDecoration(
-                    color: Color(0xff911f2a),
-                    borderRadius: BorderRadius.circular(15)),
                 child: Performance(),
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 10),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 30),
-                      child: Text(
-                        '"delivering \n happiness,one\n package at a time"',
-                        style: TextStyle(
-                            fontFamily: 'poppins',
-                            fontSize: 15,
-                            fontWeight: FontWeight.w600),
-                      ),
-                    ),
-                    Container(
-                      width: 180,
-                      height: 120,
-                      child: Image.asset('assets/delivryboy/images/bghomepage.png'),
-                    )
-                  ],
-                ),
+              SizedBox(height: Height*0.03,),
+              Row(
+
+                children: [
+                  SizedBox(width: Width*0.05,),
+                  Text(
+                    '"delivering \n happiness,one\n package at a time"',
+                    style: TextStyle(
+                        fontFamily: 'poppins',
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  Spacer(),
+                  Container(
+                    width: Width*0.5,
+                    height: 120,
+                    child: Image.asset('assets/delivryboy/images/bghomepage.png'),
+                  )
+                ],
               ),
             ],
           ),]

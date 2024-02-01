@@ -6,22 +6,29 @@ class DlNotification extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final height =MediaQuery.of(context).size.height;
-    final width =MediaQuery.of(context).size.width;
+    final Height =MediaQuery.of(context).size.height;
+    final Width =MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: ImageIcon(
+            AssetImage('assets/icons/left.png'),
+            size: 30,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         backgroundColor: Color(0xff911f2a),
         automaticallyImplyLeading: false,
-        title: Padding(
-          padding: const EdgeInsets.only(left: 15),
-          child: Text(
-            'Notification',
-            style: TextStyle(
-              fontFamily: 'poppins',
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
+        title: Text(
+          'Notification',
+          style: TextStyle(
+            fontFamily: 'poppins',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
           ),
         ),
         actions: [
@@ -69,93 +76,55 @@ class DlNotification extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
+    body: Container(
+    height: Height,
+    width: Width,
+    child: ListView.builder(
+    itemCount: 2,
+    itemBuilder: (context, index) {
+      return Container(
         margin: EdgeInsets.all(10),
-        height: height,
-        width: width,
-        // color: Colors.grey,
-        child: Column(
+        height: Height*0.07,
+        // width: width,
+        decoration: BoxDecoration(
+          border: Border.all(),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              height: 10,
+              width: 10,
             ),
-            Container(
-              height: height/10,
-              width: width,
-              decoration: BoxDecoration(
-                border: Border.all(),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Text('1',style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),),
-                  // SizedBox(
-                  //   width: 20,
-                  // ),
-                  Text('Order No:#001',style: TextStyle(
-                      fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),),
-                  // SizedBox(width: 20,),
-                  Text('is ready for delivery!',style: TextStyle(
-                      fontSize: 12,
-                    color:Color(0xff3C8A3C)
-                  ),),
-                  SizedBox(
-                    width: 10,
-                  ),
-                ],
-              ),
-            ),
+            Text('1',style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),),
+// SizedBox(
+//   width: 20,
+// ),
+            Text('Order No:#001',style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),),
+// SizedBox(width: 20,),
+            Text('is ready for delivery!',style: TextStyle(
+                fontSize: 12,
+                color:Color(0xff3C8A3C)
+            ),),
             SizedBox(
-              height: 10,
-            ),
-            Container(
-              height: height/10,
-              width: width,
-              decoration: BoxDecoration(
-                border: Border.all(),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  width: 10,
-                ),
-                Text('2',style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),),
-                // SizedBox(
-                //   width: 20,
-                // ),
-                Text('Order No:#002',style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),),
-                // SizedBox(width: 20,),
-                Text('is ready for delivery!',style: TextStyle(
-                    fontSize: 12,
-                    color:Color(0xff3C8A3C)
-                ),),
-                SizedBox(
-                  width: 10,
-                ),
-              ],
-            ),
+              width: 10,
             ),
           ],
         ),
-      )
+      );
 
-    );
+
+
+    }
+
+    )
+
+    ));
   }
 }

@@ -1,6 +1,5 @@
 import 'package:alridafrieds/user/accounts/Payment.dart';
 import 'package:alridafrieds/user/menu/menu.dart';
-import 'package:alridafrieds/user/menu/FriedChicken.dart';
 import 'package:flutter/material.dart';
 
 class AccountCart extends StatefulWidget {
@@ -80,7 +79,7 @@ class _AccountCartState extends State<AccountCart> {
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => Menu()),
+                              MaterialPageRoute(builder: (context) => AlRidaMenu()),
                             );
                           },
                           child: Text(

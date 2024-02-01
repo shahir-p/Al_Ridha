@@ -11,28 +11,34 @@ class Performance extends StatefulWidget {
 class _PerformanceState extends State<Performance> {
   @override
   Widget build(BuildContext context) {
+    final Height= MediaQuery.of(context).size.height;
+    final Width= MediaQuery.of(context).size.width;
     return Container(
+      height: Height*0.43,
+      width: Width-20,
+      decoration: BoxDecoration(
+          color: Color(0xff911f2a),
+          borderRadius: BorderRadius.circular(15)),
       child: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 10, top: 5),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Performance',
-                  style: TextStyle(
-                    fontFamily: 'poppins',
-                    fontSize: 22,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
+          SizedBox(height: Height*0.01,),
+          Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(width: Width*0.02,),
+              Text(
+                'Performance',
+                style: TextStyle(
+                  fontSize: Height*0.025,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
           Expanded(
             child: Container(
+              height: Height*0.3,
               // color: Colors.blueAccent,
               child: MyTabBar(),
             ),
@@ -48,6 +54,8 @@ class _PerformanceState extends State<Performance> {
 class MyTabBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final Height= MediaQuery.of(context).size.height;
+    final Width= MediaQuery.of(context).size.width;
     return DefaultTabController(
       length: 3, // specify the number of tabs
       child: Column(
@@ -55,32 +63,29 @@ class MyTabBar extends StatelessWidget {
           Container(
             constraints: BoxConstraints.expand(
                 height: 50), // adjust the height as needed
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 5),
-              child: TabBar(
-                tabs: [
-                  Tab(
-                    text: 'Daily',
-                  ),
-                  Tab(text: 'Weekly'),
-                  Tab(text: 'Monthly'),
-                ],
-                indicator: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20), // Creates border
-                  color: Colors.white,
+            child: TabBar(
+              tabs: [
+                Tab(
+                  text: 'Daily',
                 ),
-                indicatorSize: TabBarIndicatorSize.tab,
-                indicatorPadding: EdgeInsets.symmetric(vertical: 5),
-                labelStyle: TextStyle(
-                    fontFamily: 'poppins',
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold),
-                labelColor:
-                    Color(0xff66161d), // customize the selected tab label color
-                unselectedLabelColor:
-                    Colors.white, // customize the unselected tab label color
-                indicatorColor: Colors.white, // customize the indicator color
+                Tab(text: 'Weekly'),
+                Tab(text: 'Monthly'),
+              ],
+              indicator: BoxDecoration(
+                borderRadius: BorderRadius.circular(20), // Creates border
+                color: Colors.white,
               ),
+              indicatorSize: TabBarIndicatorSize.tab,
+              indicatorPadding: EdgeInsets.symmetric(vertical: 5),
+              labelStyle: TextStyle(
+                  fontFamily: 'poppins',
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold),
+              labelColor:
+                  Color(0xff66161d), // customize the selected tab label color
+              unselectedLabelColor:
+                  Colors.white, // customize the unselected tab label color
+              indicatorColor: Colors.white, // customize the indicator color
             ),
           ),
           Expanded(
@@ -93,6 +98,7 @@ class MyTabBar extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 10),
                     child: ListView(children: [
                       Column(
+
                         children: [
                           Padding(
                             padding: EdgeInsets.symmetric(
@@ -101,7 +107,7 @@ class MyTabBar extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10)),
-                              height: 70,
+                              height: Height*0.08,
                               // width: double.infinity,
                               child: Padding(
                                 padding:
@@ -143,7 +149,7 @@ class MyTabBar extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10)),
-                              height: 70,
+                              height: Height*0.08,
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 20),
@@ -198,7 +204,7 @@ class MyTabBar extends StatelessWidget {
                               decoration: BoxDecoration(
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(10)),
-                              height: 70,
+                              height: Height*0.08,
                               child: Padding(
                                 padding:
                                     const EdgeInsets.symmetric(horizontal: 20),

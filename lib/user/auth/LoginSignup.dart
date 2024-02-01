@@ -129,10 +129,6 @@ class SignUporIn extends StatelessWidget {
               ListTile(
                 title: Text('Customer '),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => SignUporIn()),
-                  );
                   // Handle Customer option click
                   Navigator.pop(context);
                 },

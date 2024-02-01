@@ -18,16 +18,13 @@ class _ProgressState extends State<Progress> {
         appBar: AppBar(
           backgroundColor: Color(0xff911f2a),
           automaticallyImplyLeading: false,
-          title: Padding(
-            padding: const EdgeInsets.only(left: 15),
-            child: Text(
-              'Progress',
-              style: TextStyle(
-                fontFamily: 'poppins',
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
+          title: Text(
+            'Progress',
+            style: TextStyle(
+              fontFamily: 'poppins',
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
             ),
           ),
           actions: [
@@ -86,236 +83,235 @@ class _ProgressState extends State<Progress> {
             ),
           ],
         ),
-        body: Center(
-          child: Container(
-            height: 600,
-            width: 340,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              // color: Colors.greenAccent
-            ),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(5),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Order No:#001',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+        body: Container(
+          height: height,
+          width: width,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            // color: Colors.greenAccent
+          ),
+          margin: EdgeInsets.all(5),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(5),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Order No:#001',
+                      style: TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      '1 min ago',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Color(0xff911f2a),
                       ),
-                      Text(
-                        '1 min ago',
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: Color(0xff911f2a),
+                    )
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Divider(height: 2, thickness: 1, color: Colors.black),
+              ),
+              Padding(
+                padding: EdgeInsets.only(left: 10),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Address:',
+                          style: TextStyle(fontSize: 20),
                         ),
-                      )
-                    ],
-                  ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text("Manakkad house,\n"
+                            "Kaithakkara",style: TextStyle(fontSize: 15),),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text('Name :',style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold
+                        ),),
+                        Text('MolT',style: TextStyle(
+                            fontSize: 18,
+
+                        ),),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text('Mobile Number :',style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold
+                        ),),
+                        Text('9946678196',style: TextStyle(
+                          fontSize: 18,
+
+                        ),),
+                      ],
+                    )
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Divider(height: 2, thickness: 1, color: Colors.black),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 10),
+                height: height * .15,
+                width: width,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(),
+                  // color: Colors.greenAccent,
                 ),
-                Padding(
-                  padding: EdgeInsets.only(left: 10),
-                  child: Column(
-                    children: [
-                      Row(
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5),
+                      child: Row(
                         children: [
                           Text(
-                            'Address:',
-                            style: TextStyle(fontSize: 20),
+                            'Ordered item:',
+                            style: TextStyle(fontSize: 18),
                           ),
                         ],
                       ),
-                      Row(
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5),
+                      child: Column(
                         children: [
-                          Text("Manakkad house,\n"
-                              "Kaithakkara",style: TextStyle(fontSize: 15),),
+                          Row(
+                            children: [
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'No',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    '1',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    '2',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Item',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    'Item1',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Text(
+                                    'Item2',
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ],
                       ),
-                      Row(
-                        children: [
-                          Text('Name :',style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold
-                          ),),
-                          Text('MolT',style: TextStyle(
-                              fontSize: 18,
-
-                          ),),
-                        ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                height: height * .07,
+                width: width * .9,
+                child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Out for delivery',
+                      style: TextStyle(color: Colors.white,
+                      fontWeight: FontWeight.bold
                       ),
-                      Row(
-                        children: [
-                          Text('Mobile Number :',style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold
-                          ),),
-                          Text('9946678196',style: TextStyle(
-                            fontSize: 18,
-
-                          ),),
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  height: height * .15,
-                  width: width,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(),
-                    // color: Colors.greenAccent,
-                  ),
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 5),
-                        child: Row(
-                          children: [
-                            Text(
-                              'Ordered item:',
-                              style: TextStyle(fontSize: 18),
-                            ),
-                          ],
-                        ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xff911f2a),
+                    )),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                height: height * .07,
+                width: width * .9,
+                child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Delivered',
+                      style: TextStyle(color: Colors.white,
+                      fontWeight: FontWeight.bold
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 5),
-                        child: Column(
-                          children: [
-                            Row(
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'No',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      '1',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      '2',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(
-                                  width: 30,
-                                ),
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'Item',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      'Item1',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                    Text(
-                                      'Item2',
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    SizedBox(
-                                      height: 5,
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor:Color(0xff3C8A3C),
+                    )),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              SizedBox(
+                height: height * .07,
+                width: width * .9,
+                child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Call',
+                      style: TextStyle(color: Colors.white,
+                      fontWeight: FontWeight.bold
                       ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  height: height * .07,
-                  width: width * .9,
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Out for delivery',
-                        style: TextStyle(color: Colors.white,
-                        fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff911f2a),
-                      )),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  height: height * .07,
-                  width: width * .9,
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Delivered',
-                        style: TextStyle(color: Colors.white,
-                        fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor:Color(0xff3C8A3C),
-                      )),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                SizedBox(
-                  height: height * .07,
-                  width: width * .9,
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Call',
-                        style: TextStyle(color: Colors.white,
-                        fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff1b7787),
-                      )),
-                ),
-              ],
-            ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xff1b7787),
+                    )),
+              ),
+            ],
           ),
         ));
   }

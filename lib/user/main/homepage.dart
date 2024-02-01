@@ -1,6 +1,5 @@
 import 'package:alridafrieds/user/accounts/Search.dart';
 import 'package:alridafrieds/user/accounts/cart.dart';
-import 'package:alridafrieds/user/menu/ItemDetails.dart';
 import 'package:alridafrieds/user/menu/menu.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
@@ -141,7 +140,7 @@ class HomeContent extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Menu()),
+                          MaterialPageRoute(builder: (context) => AlRidaMenu()),
                         );
                       },
                       child: Text(
@@ -157,7 +156,7 @@ class HomeContent extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Menu()),
+                          MaterialPageRoute(builder: (context) => AlRidaMenu()),
                         );
                       },
                       child: Text(
@@ -199,7 +198,7 @@ class HomeContent extends StatelessWidget {
                         onTap:() {
                           Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => Menu()));
+                              MaterialPageRoute(builder: (context) => AlRidaMenu()));
 
                         }),
                       SizedBox(
@@ -210,7 +209,7 @@ class HomeContent extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                               image: AssetImage(
-                                "assets/sp6.png",
+                                "assets/sp/sp2.png",
                               ),
                               fit: BoxFit.fill),
                           // color: Colors.red,
@@ -225,7 +224,7 @@ class HomeContent extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                               image: AssetImage(
-                                "assets/sp6.png",
+                                "assets/sp/sp5.png",
                               ),
                               fit: BoxFit.fill),
                           // color: Colors.red,
@@ -240,31 +239,31 @@ class HomeContent extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                           image: DecorationImage(
                               image: AssetImage(
-                                "assets/sp6.png",
+                                "assets/sp/delicious-chicken-table.jpg",
                               ),
                               fit: BoxFit.fill),
                           // color: Colors.red,
                         ),
                         width: 280,
                       ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage(
-                                "assets/sp6.png",
-                              ),
-                              fit: BoxFit.fill),
-                          // color: Colors.red,
-                        ),
-                        width: 280,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
+                      // SizedBox(
+                      //   width: 5,
+                      // ),
+                      // Container(
+                      //   decoration: BoxDecoration(
+                      //     borderRadius: BorderRadius.circular(10),
+                      //     image: DecorationImage(
+                      //         image: AssetImage(
+                      //           "assets/sp6.png",
+                      //         ),
+                      //         fit: BoxFit.fill),
+                      //     // color: Colors.red,
+                      //   ),
+                      //   width: 280,
+                      // ),
+                      // SizedBox(
+                      //   width: 5,
+                      // ),
                     ],
                   ),
                 ),
@@ -282,7 +281,7 @@ class HomeContent extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Menu()),
+                          MaterialPageRoute(builder: (context) => AlRidaMenu()),
                         );
                       },
                       child: Text(
@@ -298,7 +297,7 @@ class HomeContent extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Menu()),
+                          MaterialPageRoute(builder: (context) => AlRidaMenu()),
                         );
                       },
                       child: Text(
@@ -322,7 +321,7 @@ class HomeContent extends StatelessWidget {
                   onTap: (){
                     Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => Menu()));
+                        MaterialPageRoute(builder: (context) => AlRidaMenu()));
                   },
                   child: Container(
                     height: 170,
