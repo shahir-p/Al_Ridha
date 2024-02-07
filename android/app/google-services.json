@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "885224834649",
+    "project_id": "al-rida-8112c",
+    "storage_bucket": "al-rida-8112c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:885224834649:android:c01d0242f1d87510151348",
+        "android_client_info": {
+          "package_name": "com.alridafrieds.alrida_frieds"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIvOQ4STYQs3hdZc33nRgWim9O67kS9LQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -3,9 +3,17 @@ import 'package:alridafrieds/deliveryboy_app/Dashboard.dart';
 import 'package:alridafrieds/deliveryboy_app/Home.dart';
 import 'package:alridafrieds/user/accounts/order%20placed.dart';
 import 'package:alridafrieds/user/auth/LoginSignup.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+import 'firebase_options.dart';
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -34,7 +42,7 @@ class MyApp extends StatelessWidget {
           800: primaryColor.withOpacity(0.8),
           900: primaryColor.withOpacity(0.9),
         }),
-        backgroundColor: defaultWidgetBackgroundColor, // Set default background color
+        // backgroundColor: defaultWidgetBackgroundColor, // Set default background color
       ),
       home: SignUporIn(),
       // home: OrderPlaced(),
