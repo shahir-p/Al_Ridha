@@ -3,7 +3,6 @@ import 'package:alridafrieds/user/menu/menu.dart';
 import 'package:flutter/material.dart';
 
 class AccountCart extends StatefulWidget {
-
   const AccountCart({super.key});
 
   @override
@@ -13,7 +12,7 @@ class AccountCart extends StatefulWidget {
 class _AccountCartState extends State<AccountCart> {
   int quantity = 1;
   int price = 99;
-  int dlcharge=40;
+  int dlcharge = 40;
 
   void incrementQuantity() {
     setState(() {
@@ -31,8 +30,26 @@ class _AccountCartState extends State<AccountCart> {
 
   @override
   Widget build(BuildContext context) {
-    final Hieght=MediaQuery.of(context).size.height;
-    final Width=MediaQuery.of(context).size.width;
+    final Hieght = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.width;
+    List<Map<String, dynamic>> items = [
+      {
+        'item': '10 Pcs',
+        'details':'sagdwuf',
+        'price': '99',
+      },
+      // {
+      //   'item': '10 Pcs',
+      //   'details':'sagdwuf',
+      //   'price': '101',
+      // },
+      // {
+      //   'item': '10 Pcs',
+      //   'details':'sagdwuf',
+      //   'price': '101',
+      // },
+
+    ];
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -40,7 +57,7 @@ class _AccountCartState extends State<AccountCart> {
         leading: IconButton(
           icon: ImageIcon(
             AssetImage('assets/icons/left.png'),
-            size: Width*0.08,
+            size: Width * 0.08,
             color: Colors.white,
           ),
           onPressed: () {
@@ -55,31 +72,35 @@ class _AccountCartState extends State<AccountCart> {
         ),
       ),
       body: Container(
-        height:Hieght,
+        height: Hieght,
         width: Width,
         color: Colors.white,
         child: Column(
           children: [
-            Container(
-              height: Hieght*0.61,
-              margin: EdgeInsets.all(10),
-              // color: Colors.blueAccent.shade100,
-              child: Column(
-                children: [
+            Expanded(
+              child: Container(
+                // height: Hieght*0.61,
+                margin: EdgeInsets.all(10),
+                // color: Colors.blueAccent.shade100,
+                child: Column(children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
-                      SizedBox(width: Width*0.01,),
+                      SizedBox(
+                        width: Width * 0.01,
+                      ),
                       Text(
                         'Order list',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
-                      ),Spacer(),
+                      ),
+                      Spacer(),
                       TextButton(
                           onPressed: () {
                             Navigator.push(
                               context,
-                              MaterialPageRoute(builder: (context) => AlRidaMenu()),
+                              MaterialPageRoute(
+                                  builder: (context) => AlRidaMenu()),
                             );
                           },
                           child: Text(
@@ -92,171 +113,195 @@ class _AccountCartState extends State<AccountCart> {
                     height: 2,
                     thickness: 2,
                   ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Container(
-                    height: Hieght*0.5,
-                    width: Width-20,
-                    // color: Colors.pinkAccent.shade100,
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              'Product name',
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.w400),
-                            ),
-                            Spacer(),
-                            IconButton(
-                              onPressed: () {},
-                              icon: ImageIcon(
-                                AssetImage(
-                                  'assets/icons/delete.png',
-                                ),
-                                size: 18,
-                                color: Color(0xff911f2a),
-                              ),
-                            ),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Details',
-                              style: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.w400),
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Price:',
-                              style: TextStyle(
-                                  fontSize: 15, fontWeight: FontWeight.bold),
-                            ),
-                            Row(
+
+
+
+
+
+                  Expanded(
+                    child: Container(
+                      margin: EdgeInsets.all(5),
+                      // color: Colors.pinkAccent.shade100,
+                      child: ListView.builder(
+                        itemCount: items.length,
+                        itemBuilder: (context, index) {
+                        return Container(
+                          margin: EdgeInsets.symmetric(vertical: 5),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all()
+                          ),
+                          // height: Hieght*0.7,
+                          // width: Width-20,
+                          // color: Colors.pinkAccent.shade100,
+                          child: Container(
+                            margin: EdgeInsets.symmetric(horizontal: 5),
+                            child: Column(
                               children: [
-                                Image.asset(
-                                  'assets/icons/rupee-indian.png',
-                                  width: 15,
-                                ),
-                                Text((price * quantity).toString(),
-                                    style: TextStyle(fontSize: 18)),
-                              ],
-                            )
-                          ],
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Row(
-                          children: [
-                            Container(
-                                child: Expanded(
-                              child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
+                                Row(
                                   children: [
-                                    // SizedBox(width: 50,),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius:
-                                            BorderRadius.circular(10),
+                                    Text(
+                                      items[index]['item'] ?? '',
+                                      style: TextStyle(
+                                          fontSize: 18, fontWeight: FontWeight.w400),
+                                    ),
+                                    Spacer(),
+                                    IconButton(
+                                      onPressed: () {},
+                                      icon: ImageIcon(
+                                        AssetImage(
+                                          'assets/icons/delete.png',
+                                        ),
+                                        size: 18,
+                                        color: Color(0xff911f2a),
                                       ),
-                                      height: 20,
-                                      width: 60,
-                                      child: Row(
-                                        children: [
-                                          Container(
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                              color: Color(0xff911f2a),
-                                            ),
-                                            width: 20,
-                                            height: 20,
-                                            child: Center(
-                                              child: IconButton(
-                                                onPressed: () {
-                                                  decrementQuantity();
-                                                },
-                                                icon: ImageIcon(
-                                                  AssetImage(
-                                                    'assets/icons/minus-sign.png',
-                                                  ),
-                                                  size: 20,
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                          Container(
-                                            color: Colors.white,
-                                            width: 20,
-                                            height: 20,
-                                            child: Center(
-                                                child: Text('$quantity',
-                                                    style: TextStyle(
-                                                        fontSize: 15))),
-                                          ),
-                                          Container(
-                                            decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(10),
-                                              color: Color(0xff3C8A3C),
-                                            ),
-                                            width: 20,
-                                            height: 20,
-                                            child: Center(
-                                              child: IconButton(
-                                                onPressed: () {
-                                                  incrementQuantity();
-                                                },
-                                                icon: ImageIcon(
-                                                  AssetImage(
-                                                    'assets/icons/plus.png',
-                                                  ),
-                                                  size: 20,
-                                                  color: Colors.white,
-                                                ),
-                                              ),
-                                            ),
-                                          )
-                                        ],
-                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      items[index]['Details']?? '',
+                                      style: TextStyle(
+                                          fontSize: 15, fontWeight: FontWeight.w400),
                                     )
-                                  ]),
-                            )),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Divider(
-                          height: 2,
-                          thickness: 1.5,
-                        )
-                      ],
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      'Price',
+                                      style: TextStyle(
+                                          fontSize: 15, fontWeight: FontWeight.bold),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Image.asset(
+                                          'assets/icons/rupee-indian.png',
+                                          width: 15,
+                                        ),
+                                        Text(
+                                          items[index]['price'],
+                                            // (price * quantity).toString(),
+                                            style: TextStyle(fontSize: 18)),
+                                      ],
+                                    )
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                Row(
+                                  children: [
+                                    Container(
+                                        child: Expanded(
+                                          child: Row(
+                                              mainAxisAlignment: MainAxisAlignment.end,
+                                              children: [
+                                                // SizedBox(width: 50,),
+                                                Container(
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                    BorderRadius.circular(10),
+                                                  ),
+                                                  height: 20,
+                                                  width: 60,
+                                                  child: Row(
+                                                    children: [
+                                                      Container(
+                                                        decoration: BoxDecoration(
+                                                          borderRadius:
+                                                          BorderRadius.circular(10),
+                                                          color: Color(0xff911f2a),
+                                                        ),
+                                                        width: 20,
+                                                        height: 20,
+                                                        child: Center(
+                                                          child: IconButton(
+                                                            onPressed: () {
+                                                              decrementQuantity();
+                                                            },
+                                                            icon: ImageIcon(
+                                                              AssetImage(
+                                                                'assets/icons/minus-sign.png',
+                                                              ),
+                                                              size: 20,
+                                                              color: Colors.white,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        color: Colors.white,
+                                                        width: 20,
+                                                        height: 20,
+                                                        child: Center(
+                                                            child: Text('$quantity',
+                                                                style: TextStyle(
+                                                                    fontSize: 15))),
+                                                      ),
+                                                      Container(
+                                                        decoration: BoxDecoration(
+                                                          borderRadius:
+                                                          BorderRadius.circular(10),
+                                                          color: Color(0xff3C8A3C),
+                                                        ),
+                                                        width: 20,
+                                                        height: 20,
+                                                        child: Center(
+                                                          child: IconButton(
+                                                            onPressed: () {
+                                                              incrementQuantity();
+                                                            },
+                                                            icon: ImageIcon(
+                                                              AssetImage(
+                                                                'assets/icons/plus.png',
+                                                              ),
+                                                              size: 20,
+                                                              color: Colors.white,
+                                                            ),
+                                                          ),
+                                                        ),
+                                                      )
+                                                    ],
+                                                  ),
+                                                )
+                                              ]),
+                                        )),
+                                  ],
+                                ),
+                                SizedBox(
+                                  height: 5,
+                                ),
+                                // Divider(
+                                //   height: 2,
+                                //   thickness: 1.5,
+                                // )
+                              ],
+                            ),
+                          ),
+
+                        );
+                      },),
                     ),
                   ),
-                ],
+                ]),
               ),
             ),
-            Spacer(),
             Container(
-              height: Hieght*0.25,
+                height: Hieght * 0.25,
                 child: Column(
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SizedBox(width: Width*0.02,),
+                        SizedBox(
+                          width: Width * 0.02,
+                        ),
                         Text(
                           'subtotal',
                           style: TextStyle(fontSize: 18),
@@ -270,7 +315,9 @@ class _AccountCartState extends State<AccountCart> {
                             ),
                             Text((price * quantity).toString(),
                                 style: TextStyle(fontSize: 18)),
-                            SizedBox(width: Width*0.02,),
+                            SizedBox(
+                              width: Width * 0.02,
+                            ),
                           ],
                         )
                       ],
@@ -283,11 +330,13 @@ class _AccountCartState extends State<AccountCart> {
                       thickness: 1.5,
                     ),
                     SizedBox(
-                      height: Hieght*0.01,
+                      height: Hieght * 0.01,
                     ),
                     Row(
                       children: [
-                        SizedBox(width: Width*0.02,),
+                        SizedBox(
+                          width: Width * 0.02,
+                        ),
                         Text(
                           'Total',
                           style: TextStyle(
@@ -300,9 +349,11 @@ class _AccountCartState extends State<AccountCart> {
                               'assets/icons/rupee-indian.png',
                               width: 15,
                             ),
-                            Text((price * quantity+dlcharge).toString(),
+                            Text((price * quantity + dlcharge).toString(),
                                 style: TextStyle(fontSize: 18)),
-                            SizedBox(width: Width*0.02,),
+                            SizedBox(
+                              width: Width * 0.02,
+                            ),
                           ],
                         )
                       ],
@@ -317,14 +368,16 @@ class _AccountCartState extends State<AccountCart> {
                       ],
                     ),
                     Spacer(),
-
                     Container(
-                      height: Hieght*0.07,
-                      width: Width-20,
+                      height: Hieght * 0.07,
+                      width: Width - 20,
                       child: ElevatedButton(
                           onPressed: () {
-
-                            Navigator.push(context, MaterialPageRoute(builder: (context) =>Payment()),);
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Payment()),
+                            );
                           },
                           child: Text(
                             'Proceed to checkout',
@@ -337,7 +390,9 @@ class _AccountCartState extends State<AccountCart> {
                           style: ElevatedButton.styleFrom(
                               backgroundColor: Color(0xff3C8A3C))),
                     ),
-                    SizedBox(height: Hieght*0.02,)
+                    SizedBox(
+                      height: Hieght * 0.02,
+                    )
                   ],
                 ),
                 color: Color(0xffededed)),
