@@ -12,6 +12,7 @@ class DlSignin extends StatefulWidget {
 class _SigninState extends State<DlSignin> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -47,8 +48,14 @@ class _SigninState extends State<DlSignin> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TextField(
+                child: TextFormField(
                   controller: _emailController,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter an email';
+                    }
+                    return null;
+                  },
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
                       borderSide: BorderSide(width: 2),
@@ -79,8 +86,14 @@ class _SigninState extends State<DlSignin> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
-                child: TextField(
+                child: TextFormField(
                   controller: _passwordController,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return 'Please enter password';
+                    }
+                    return null;
+                  },
                   obscureText: true,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -103,9 +116,10 @@ class _SigninState extends State<DlSignin> {
                   height: 60,
                   width: double.infinity,
                   child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) =>Dashboard()),);
-                      // Access _emailController.text and _passwordController.text for user input
+                    onPressed: (){ if (_formKey.currentState!.validate()) {
+                      Navigator.push(context, MaterialPageRoute(builder: (
+                          context) => Dashboard()),);
+                    }// Access _emailController.text and _passwordController.text for user input
                     },
                     child: Text(
                       'Sign in',

@@ -7,6 +7,8 @@ import 'package:flutter_image_slideshow/flutter_image_slideshow.dart';
 class HomeContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final Hieght = MediaQuery.of(context).size.height;
+    final Width = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xff911f2a),
@@ -74,17 +76,17 @@ class HomeContent extends StatelessWidget {
         ],
       ),
       body: Container(
-        height: double.infinity,
-        width: double.infinity,
+        height: Hieght,
+        width: Width,
         child: ListView(children: [
           Column(
             children: [
               Container(
-                height: 250,
-                width: double.infinity,
+                height: Hieght*0.3,
+                width: Width,
                 child: ImageSlideshow(
                   /// Width of the [ImageSlideshow].
-                  width: double.infinity,
+                  width: Width,
 
                   /// Height of the [ImageSlideshow].
                   height: 250,
@@ -174,15 +176,21 @@ class HomeContent extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.only(left: 10),
-                child: Container(
-                  height: 170,
-                  width: double.infinity,
-                  child: ListView(
-                    // This next line does the trick.
-                    scrollDirection: Axis.horizontal,
-                    children: <Widget>[
-                      InkWell(
-                        child: Container(
+                child: InkWell(
+                  onTap:() {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AlRidaMenu()));
+
+                  },
+                  child: Container(
+                    height: 170,
+                    width: double.infinity,
+                    child: ListView(
+                      // This next line does the trick.
+                      scrollDirection: Axis.horizontal,
+                      children: <Widget>[
+                        Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             image: DecorationImage(
@@ -195,76 +203,71 @@ class HomeContent extends StatelessWidget {
                           width: 280,
                           // child: Image.asset('assets/sp6.png',fit: BoxFit.cover,),
                         ),
-                        onTap:() {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => AlRidaMenu()));
-
-                        }),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage(
-                                "assets/sp/sp2.png",
-                              ),
-                              fit: BoxFit.fill),
-                          // color: Colors.red,
+                        SizedBox(
+                          width: 5,
                         ),
-                        width: 280,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage(
-                                "assets/sp/sp5.png",
-                              ),
-                              fit: BoxFit.fill),
-                          // color: Colors.red,
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: AssetImage(
+                                  "assets/sp/sp2.png",
+                                ),
+                                fit: BoxFit.fill),
+                            // color: Colors.red,
+                          ),
+                          width: 280,
                         ),
-                        width: 280,
-                      ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          image: DecorationImage(
-                              image: AssetImage(
-                                "assets/sp/delicious-chicken-table.jpg",
-                              ),
-                              fit: BoxFit.fill),
-                          // color: Colors.red,
+                        SizedBox(
+                          width: 5,
                         ),
-                        width: 280,
-                      ),
-                      // SizedBox(
-                      //   width: 5,
-                      // ),
-                      // Container(
-                      //   decoration: BoxDecoration(
-                      //     borderRadius: BorderRadius.circular(10),
-                      //     image: DecorationImage(
-                      //         image: AssetImage(
-                      //           "assets/sp6.png",
-                      //         ),
-                      //         fit: BoxFit.fill),
-                      //     // color: Colors.red,
-                      //   ),
-                      //   width: 280,
-                      // ),
-                      // SizedBox(
-                      //   width: 5,
-                      // ),
-                    ],
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: AssetImage(
+                                  "assets/sp/sp5.png",
+                                ),
+                                fit: BoxFit.fill),
+                            // color: Colors.red,
+                          ),
+                          width: 280,
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                                image: AssetImage(
+                                  "assets/sp/delicious-chicken-table.jpg",
+                                ),
+                                fit: BoxFit.fill),
+                            // color: Colors.red,
+                          ),
+                          width: 280,
+                        ),
+                        // SizedBox(
+                        //   width: 5,
+                        // ),
+                        // Container(
+                        //   decoration: BoxDecoration(
+                        //     borderRadius: BorderRadius.circular(10),
+                        //     image: DecorationImage(
+                        //         image: AssetImage(
+                        //           "assets/sp6.png",
+                        //         ),
+                        //         fit: BoxFit.fill),
+                        //     // color: Colors.red,
+                        //   ),
+                        //   width: 280,
+                        // ),
+                        // SizedBox(
+                        //   width: 5,
+                        // ),
+                      ],
+                    ),
                   ),
                 ),
               ),
